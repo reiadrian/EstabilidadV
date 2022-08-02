@@ -1,0 +1,76 @@
+DEBUT(LANG='EN')
+
+
+mesh = LIRE_MAILLAGE(identifier='0:1',
+                     UNITE=2)
+
+model = AFFE_MODELE(identifier='1:1',
+                    AFFE=_F(MODELISATION=('Q4G', ),
+                            PHENOMENE='MECANIQUE',
+                            TOUT='OUI'),
+                    MAILLAGE=mesh)
+
+elemprop = AFFE_CARA_ELEM(identifier='2:1',
+                          COQUE=_F(EPAIS=0.25,
+                                   GROUP_MA=('INF', 'DCHA', 'SUP', 'IZQ', 'Group_1')),
+                          MODELE=model)
+
+mater = DEFI_MATERIAU(identifier='3:1',
+                      ELAS=_F(E=30000000.0,
+                              NU=0.3))
+
+fieldmat = AFFE_MATERIAU(identifier='4:1',
+                         AFFE=_F(MATER=(mater, ),
+                                 TOUT='OUI'),
+                         MAILLAGE=mesh,
+                         MODELE=model)
+
+load = AFFE_CHAR_MECA(identifier='5:1',
+                      DDL_IMPO=(_F(DRX=0.0,
+                                   DZ=0.0,
+                                   GROUP_MA=('IZQ', )),
+                                _F(DRY=0.0,
+                                   DZ=0.0,
+                                   GROUP_MA=('INF', )),
+                                _F(DRX=0.0,
+                                   DRY=0.0,
+                                   DX=0.0,
+                                   DY=0.0,
+                                   DZ=0.0,
+                                   GROUP_NO=('A', )),
+                                _F(DRX=0.0,
+                                   GROUP_MA=('SUP', )),
+                                _F(DRY=0.0,
+                                   GROUP_MA=('DCHA', )),
+                                _F(DRY=0.0,
+                                   GROUP_NO=('C', )),
+                                _F(DRX=0.0,
+                                   DX=0.0,
+                                   DZ=0.0,
+                                   GROUP_NO=('D', )),
+                                _F(DRY=0.0,
+                                   DY=0.0,
+                                   DZ=0.0,
+                                   GROUP_NO=('B', ))),
+                      FORCE_NODALE=_F(FZ=-250.0,
+                                      GROUP_NO=('C', )),
+                      MODELE=model)
+
+reslin = MECA_STATIQUE(identifier='6:1',
+                       CARA_ELEM=elemprop,
+                       CHAM_MATER=fieldmat,
+                       EXCIT=_F(CHARGE=load),
+                       MODELE=model)
+
+reslin = CALC_CHAMP(identifier='7:1',
+                    reuse=reslin,
+                    CONTRAINTE=('EFGE_ELNO', ),
+                    RESULTAT=reslin)
+
+IMPR_RESU(identifier='8:1',
+          RESU=_F(CARA_ELEM=elemprop,
+                  MAILLAGE=mesh,
+                  RESULTAT=reslin),
+          UNITE=80)
+
+FIN()

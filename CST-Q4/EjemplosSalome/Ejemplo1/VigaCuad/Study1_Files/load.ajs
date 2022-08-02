@@ -1,0 +1,45 @@
+{
+  "history": {
+    "cases": [
+      {
+        "name": "RunCase_1",
+        "stages": [
+          1
+        ]
+      },
+      {
+        "name": "CurrentCase",
+        "stages": [
+          1
+        ]
+      }
+    ],
+    "stages": [
+      {
+        "name": "Stage_1",
+        "text": "mesh = LIRE_MAILLAGE(UNITE=20)\n\nmodel = AFFE_MODELE(AFFE=_F(MODELISATION=('C_PLAN', ), PHENOMENE='MECANIQUE', TOUT='OUI'), MAILLAGE=mesh)\n\nmater = DEFI_MATERIAU(ELAS=_F(E=30000.0, NU=0.2))\n\nfieldmat = AFFE_MATERIAU(AFFE=_F(MATER=(mater, ), TOUT='OUI'), MAILLAGE=mesh, MODELE=model)\n\nrestric = AFFE_CHAR_MECA(DDL_IMPO=_F(GROUP_MA=('Fijos', ), LIAISON='ENCASTRE'), MODELE=model)\n\nload0 = AFFE_CHAR_MECA(FORCE_NODALE=_F(FY=-0.2, GROUP_NO=('Carga', )), MODELE=model)\n\nreslin = MECA_STATIQUE(CHAM_MATER=fieldmat, EXCIT=(_F(CHARGE=restric), _F(CHARGE=load0)), MODELE=model)\n\nreslin = CALC_CHAMP(reuse=reslin, CHAM_MATER=fieldmat, CONTRAINTE=('SIGM_ELGA', 'SIGM_ELNO'), MODELE=model, RESULTAT=reslin)\n\nIMPR_RESU(RESU=_F(RESULTAT=reslin), UNITE=80)",
+        "files": [
+          {
+            "handle": 20,
+            "filename": "0:1:2:6",
+            "attr": 1
+          },
+          {
+            "handle": 80,
+            "filename": "/home/adrian/SalomeMeca2019/Ejemplos22/VigaCuad/result.rmed",
+            "attr": 2
+          }
+        ],
+        "result": {
+          "job": {},
+          "resstate": 1
+        },
+        "uid": 1
+      }
+    ],
+    "aster": "stable",
+    "versionMajor": 14,
+    "versionMinor": 4
+  },
+  "minor": 10
+}

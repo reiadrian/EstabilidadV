@@ -1,0 +1,877 @@
+
+>>> 2022/07/27-18:15:45.293  [start@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/main.py:71]
+Command line run on 'reiadrian'
+using python executable '/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Python-365/bin/python' :
+['/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/bin/as_run',
+ '--num_job=28063-0005-reiadrian',
+ 'export']
+
+>>> 2022/07/27-18:15:45.293  [__init__@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/system.py:194]
+AsterSystem param :
+{'remote_copy_protocol': 'SCP', 'remote_shell_protocol': 'SSH'}
+
+>>> 2022/07/27-18:15:45.294  [Shell@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/system.py:519]
+remote command ( <> reiadrian and adrian <> adrian) ? False
+
+>>> 2022/07/27-18:15:45.294  [GetMemInfo@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/system.py:877]
+cmd :
+cat /proc/meminfo
+background : False
+follow_output : False
+
+>>> 2022/07/27-18:15:45.312  [GetMemInfo@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/system.py:884]
+GetMemInfo 'memtotal' returns : 15932
+
+>>> 2022/07/27-18:15:45.312  [Shell@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/system.py:519]
+remote command ( <> reiadrian and adrian <> adrian) ? False
+
+>>> 2022/07/27-18:15:45.312  [GetCpuInfo@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/system.py:855]
+cmd :
+cat /proc/cpuinfo
+background : False
+follow_output : False
+
+>>> 2022/07/27-18:15:45.343  [GetCpuInfo@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/system.py:863]
+GetCpuInfo 'numcpu' returns : 4
+
+>>> 2022/07/27-18:15:45.344  [get_limits@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/common_func.py:177]
+Limits returned :
+{'interactif_memmax': 15932,
+ 'interactif_mpi_nbpmax': 32,
+ 'interactif_nbpmax': 4,
+ 'interactif_tpsmax': '9999:00:00'}
+
+>>> 2022/07/27-18:15:45.345  [get_limits@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/common_func.py:177]
+Limits returned :
+{'batch_memmax': 15932,
+ 'batch_mpi_nbpmax': 32,
+ 'batch_nbpmax': 4,
+ 'batch_tpsmax': '9999:00:00'}
+
+>>> 2022/07/27-18:15:45.345  [PostConf@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/run.py:583]
+installation dirs (aster_root, confdir, localedir, LANG)
+/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190
+/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/etc/codeaster
+/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/share/locale
+es_AR.UTF-8
+
+>>> 2022/07/27-18:15:45.348  [RunAster@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/execute.py:152]
+source list : ('export',)
+destination : /tmp/astk_adrian/adrian-reiadrian-profil_astk_28063-0005-reiadrian
+
+>>> 2022/07/27-18:15:45.349  [RunAster@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/execute.py:152]
+cmd :
+cp -L -r export /tmp/astk_adrian/adrian-reiadrian-profil_astk_28063-0005-reiadrian
+background : False
+follow_output : False
+
+>>> 2022/07/27-18:15:45.367  [_dbg@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/profil.py:46]
+P memory_limit: 2048.0    P memjob: 2097152    A memjeveux: 256.0
+
+>>> 2022/07/27-18:15:45.367  [_dbg@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/profil.py:46]
+P time_limit: 900.0    P tpsjob: 16    A tpmax: 900.0
+
+>>> 2022/07/27-18:15:45.378  [_dbg@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/profil.py:46]
+P memory_limit: 2048.0    P memjob: 2097152    A memjeveux: 256.0
+
+>>> 2022/07/27-18:15:45.378  [_dbg@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/profil.py:46]
+P time_limit: 900.0    P tpsjob: 16    A tpmax: 900.0
+
+>>> 2022/07/27-18:15:45.379  [RunAster@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/execute.py:161]
+Input export : /tmp/astk_adrian/adrian-reiadrian-profil_astk_28063-0005-reiadrian
+AsterProfil object   = 0x55bf586e2468
+.filename            = /tmp/astk_adrian/adrian-reiadrian-profil_astk_28063-0005-reiadrian
+P actions make_etude
+P debug nodebug
+P memjob 2097152
+P memory_limit 2048.0
+P mode interactif
+P mpi_nbcpu 1
+P mpi_nbnoeud 1
+P ncpus 0
+P nomjob RunCase_1_Stage_1
+P origine AsterStudy 0.11
+P server localhost
+P studyid 28063-0005-reiadrian
+P time_limit 900.0
+P tpsjob 16
+P version stable
+A memjeveux 256.0
+A tpmax 900.0
+F comm /tmp/asterstudy_workdir_adrian/adrian-reiadrian-mié-27-181543.531/RunCase_1_Stage_1.comm D  1
+F libr /tmp/asterstudy_workdir_adrian/adrian-reiadrian-mié-27-181543.531/_ExportedFromSalomeObject_0_1_2_4.med D  20
+F libr /tmp/asterstudy_workdir_adrian/adrian-reiadrian-
+[...]
+
+>>> 2022/07/27-18:15:45.380  [AsterBuild@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/build.py:1421]
+version supports: ('waf', 'nocopy', 'orbinitref', 'use_numthreads', 'noresu')
+
+>>> 2022/07/27-18:15:45.381  [Shell@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/system.py:519]
+remote command ( <> reiadrian and adrian <> adrian) ? False
+
+>>> 2022/07/27-18:15:45.381  [AddToEnv@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/system.py:806]
+cmd :
+bash -c env
+background : False
+follow_output : False
+
+>>> 2022/07/27-18:15:45.390  [AddToEnv@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/system.py:807]
+env_init
+SHELL=/bin/bash
+SESSION_MANAGER=local/reiadrian:@/tmp/.ICE-unix/1899,unix/reiadrian:/tmp/.ICE-unix/1899
+XLUTILS_HOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Xlutils-200
+SWIG_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Swig-3012
+QT_ACCESSIBILITY=1
+SUITRoot=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome
+GMSHPLUGIN_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+COLORTERM=truecolor
+PYUIC=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Pyqt-590/bin/pyuic5
+CSF_MDTVTexturesDirectory=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Occ-730p3/src/Textures
+OMNIORB_CONFIG=/tmp/.omniORB_adrian_last.cfg
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+MMGT_REENTRANT=1
+EFICAS_NOUVEAU_ROOT=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Eficas_nouveau-V9_3_2
+OTGUI_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Otgui-v61
+XDG_MENU_PREFIX=gnome-
+no_proxy=localhost,127.0.0.0/8,::1
+NETGENPLUGIN_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+CSF_UnitsLexicon=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Occ-730p3/src/UnitsAPI/Lexi_Expr.dat
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+R_HOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/R-2151/lib/R
+SHAPERResources=/home/adrian/SalomeMeca2019//V2019.0.3_universal/modules/SHAPER_V9_3_0/share/salome/resources/shaper
+OPENTURNS_HOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Openturns_tool-112
+SIP_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Sip-4193
+LXML_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Lxml-340
+TK_LIBRARY=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Tk-860/lib/tk8.6
+PV_MACRO_PATH=/home/adrian/.config/salome/Macros
+GEOM_PluginsList=BREPPlugin:STEPPlugin:IGESPlugin:STLPlugin:XAOPlugin:VTKPlugin:AdvancedGEOM
+PYQT_SIPS=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Pyqt-590/share/sip
+CSF_SHMessageStd=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Occ-730p3/src/SHMessageStd
+LANGUAGE=es_AR:es
+TKDIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Tk-860
+PYQT_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Pyqt-590
+CGNSHOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Cgnslib-331
+QWT_INCLUDES=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Qwt-612/include
+CSF_ShHealingDefaults=/tmp/logs/adrian/env_2810
+GNOME_SHELL_SESSION_MODE=ubuntu
+SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+KERNEL_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+MODULES_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/modules
+CSF_GEOMDS_ResourcesDefaults=/tmp/logs/adrian/env_2810
+__name__=SALOME GUI Configuration
+CSF_SALOMEDS_ResourcesDefaults=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/kernel
+PLANEGCS_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Planegcs-018
+NETGENHOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Netgen-531
+SALOMEMECA_PYUTILS_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Salomemeca_pyutils-20190
+GMSH_BIN_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Gmsh_bin-2120Linux64/bin
+ECREVISSE_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Ecrevisse-322
+MESHGEMSHOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Meshgems-286
+GEOM_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+HOMARD_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+SSH_AGENT_PID=1864
+SHAPER_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+SALOME_NETGENPluginResources=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/netgenplugin
+LIBXML_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Libxml2-291
+ROOT_SALOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal
+XLRD_HOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Xlrd-120
+TK_LIBRARY_SO=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Tk-860/lib/libtk8.6.so
+GMSH_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Gmsh-414
+GTK_MODULES=gail:atk-bridge
+ASTER_ROOT=/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190
+PWD=/tmp/asterstudy_workdir_adrian/adrian-reiadrian-mié-27-181543.531
+TOOLS_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools
+PLUGINS_CONFIG_FILE=/home/adrian/SalomeMeca2019//V2019.0.3_universal/modules/SHAPER_V9_3_0/share/salome/resources/shaper
+ATOMGEN_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+XDG_SESSION_DESKTOP=ubuntu
+LOGNAME=adrian
+QT_QPA_PLATFORMTHEME=gtk2
+HELLO_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+XDG_SESSION_TYPE=x11
+OTGUI_HTML_DOCUMENTATION_PATH=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Otgui-v61/share/otgui/doc/html/
+GPG_AGENT_INFO=/run/user/1000/gnupg/S.gpg-agent:0:1
+MESHGEMS_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Meshgems-286
+PREREQUISITES_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites
+SALOME_PLUGINS_PATH=/home/adrian/SalomeMeca2019/V2019.0.3_universal/plugins:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Salomemeca_plugins-20190_public/lib/python3.6/site-packages/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Salomemeca_mofem-20190/lib/python3.6/site-packages/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Salomemeca_translator-20190/lib/python3.6/site-packages/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/plugins:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Salomemeca_plugins-20190_public/lib/python3.6/site-packages/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Salomemeca_mofem-20190/lib/python3.6/site-packages/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Salomemeca_translator-20190/lib/python3.6/site-packages/salome
+EIGEN_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Eigen-334
+_=/usr/bin/env
+XAUTHORITY=/run/user/1000/gdm/Xauthority
+CSF_StandardLiteDefaults=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Occ-730p3/src/StdResource
+BLSURFPLUGIN_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+HDF5HOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Hdf5-1103
+ASTER_STABLE=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Code_aster_stable-v144_smeca
+SALOME_MODULES_ORDER=SHAPER:GEOM:SMESH
+ABSOLUTE_APPLI_PATH=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+YDEFX_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+DOCUTILS_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Docutils-012
+TCLDIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Tcl-860
+WINDOWPATH=2
+__place_holder__=0
+HOME=/home/adrian
+USERNAME=adrian
+WISHEXECUTABLE=
+IM_CONFIG_PHASE=1
+LANG=es_AR.UTF-8
+GHS3DPLUGIN_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+LIBBATCH_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Libbatch-V2_4_1
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+SALOME_HEXABLOCKPluginResources=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/hexablockplugin
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+ADAO_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+NUMPY_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Numpy-1151
+R_LIBS=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Rotrpackage-146":/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Rotrpackage-146
+PYTHONSTARTUP=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Python-365/pythonrc.py
+SalomeAppConfig=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/gui:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/asterstudy:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/shaper:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/geom:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/smesh:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/paravis:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/fields:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/yacs:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/jobmanager:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/homard:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/openturns:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/adao:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/netgenplugin:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/calculator:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/hybridplugin:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/hexoticplugin:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/ghs3dplugin:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/europlexus:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/blsurfplugin:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/gmshplugin::
+HOMARD_EXE=homard
+VTE_VERSION=6003
+SALOMEMECA_MOFEM_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Salomemeca_mofem-20190
+GRAPHVIZHOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Graphviz-2380
+SALOMEPATH=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+SALOME_GMSHPluginResources=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/gmshplugin
+SALOME_HexoticPLUGINResources=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/hexoticplugin
+OpenCASCADE_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Occ-730p3
+HYBRIDPLUGIN_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+PARAVIS_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+SALOMEMECA_PLUGINS_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Salomemeca_plugins-20190_public
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/6b084142_7320_4439_9e20_0b49b937c414
+METISDIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Metis_aster-510_aster4,/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Metis-510
+PARAVIS_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/modules/PARAVIS_V9_3_0
+TCL_LIBRARY_SO=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Tcl-860/lib/libtcl8.6.so
+ADAO_INTERFACE_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Adao_interface-227a599c1e22d
+OMNIORB_USER_PATH=/tmp
+INVOCATION_ID=9450fc2bfc424aff9b2d0ee946cd8492
+PY2CPP_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Py2cpp-v10
+MANAGERPID=1644
+LIBXSLT_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Libxslt-1128
+DISTENE_LICENSE_FILE=Use global envvar: DLIM8VAR
+CSF_XmlOcafResource=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Occ-730p3/src/XmlOcafResource
+OMNIORB_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Omniorb-422
+APPLI=SalomeMeca2019/appli_V2019.0.3_universal
+SMESH_MeshersList=StdMeshers:HEXABLOCKPlugin:NETGENPlugin:GMSHPlugin:BLSURFPlugin:GHS3DPlugin:HYBRIDPlugin:HexoticPLUGIN
+CSF_SHMessage=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Occ-730p3/src/SHMessage
+SAMPLES_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/modules/SAMPLES_V9_3_0
+PYHELLO_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+PVVERSION=5.6
+LESSCLOSE=/usr/bin/lesspipe %s %s
+XDG_SESSION_CLASS=user
+SWIG_LIB=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Swig-3012/share/swig/3.0.12
+BOOSTDIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Boost-1580
+HEXABLOCK_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+HEXABLOCKPLUGIN_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+PYTHONPATH=/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/lib/python3.6/site-packages/salome/shared_modules:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/lib/python3.6/site-packages/salome:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/lib/salome:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/bin/salome:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/europlexus:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/KERNEL_V9_3_0/bin/salome/appliskel:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Python-365/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Sip-4193/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Omniorb-422/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Pygments-202/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Numpy-1151/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Pyqt-590/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Matplotlib-222/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Nlopt-242/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Scipy-0191/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Docutils-012/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Jinja-273/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_tool-112/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_fftw-06/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Libbatch-V2_4_1/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Omniorbpy-422/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Omniorbpy-422/lib/python3.6/site-packages/omniidl_be:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Salomemeca_pyutils-20190/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Paraview-v560p1/lib/paraview-5.6:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Paraview-v560p1/lib/paraview-5.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Paraview-v560p1/lib/paraview-5.6/site-packages/vtkmodules:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Adao-V9_3_0_0/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Medfichier-400/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Medcoupling-V9_3_0/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/ASTERSTUDY_201903/lib/python3.6/site-packages/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/ASTERSTUDY_201903/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/SMESH_V9_3_0/share/salome/plugins/smesh/Verima:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_robopt-04/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Xlutils-200/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Cython-0252/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/H5py-280/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_pmml-16/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Xlwt-130/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Zcracks-292p2/plugin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Gnuplotpy-183k/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Pillow-342/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_wrapy-07_EDF/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Xlrd-120/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/SHAPER_V9_3_0/bin/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/SHAPER_V9_3_0/lib/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_mixmod-07/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Salomemeca_plugins-20190_public/lib/python3.6/site-packages/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Salomemeca_plugins-20190_public/lib/python3.6/site-packages/salome/CF:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Salomemeca_mofem-20190/lib/python3.6/site-packages/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Salomemeca_translator-20190/lib/python3.6/site-packages/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Mfront-TFEL321/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/EUROPLEXUS_201901/lib/python3.6/site-packages/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/EUROPLEXUS_201901/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_svm-05/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_morris-05/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Otgui-v61/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_lm-07/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Lxml-340/lib/python3.6/site-packages:/tmp/asterstudy_workdir_adrian/adrian-reiadrian-mié-27-181543.531:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Python-365/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Sip-4193/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Omniorb-422/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Pygments-202/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Numpy-1151/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Pyqt-590/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Matplotlib-222/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Nlopt-242/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Scipy-0191/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Docutils-012/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Jinja-273/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_tool-112/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_fftw-06/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Libbatch-V2_4_1/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Omniorbpy-422/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Omniorbpy-422/lib/python3.6/site-packages/omniidl_be:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Salomemeca_pyutils-20190/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Paraview-v560p1/lib/paraview-5.6:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Paraview-v560p1/lib/paraview-5.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Paraview-v560p1/lib/paraview-5.6/site-packages/vtkmodules:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Adao-V9_3_0_0/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Medfichier-400/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Medcoupling-V9_3_0/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/ASTERSTUDY_201903/lib/python3.6/site-packages/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/ASTERSTUDY_201903/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/SMESH_V9_3_0/share/salome/plugins/smesh/Verima:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_robopt-04/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Xlutils-200/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Cython-0252/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/H5py-280/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_pmml-16/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Xlwt-130/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Zcracks-292p2/plugin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Gnuplotpy-183k/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Pillow-342/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_wrapy-07_EDF/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Xlrd-120/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/SHAPER_V9_3_0/bin/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/SHAPER_V9_3_0/lib/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_mixmod-07/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Salomemeca_plugins-20190_public/lib/python3.6/site-packages/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Salomemeca_plugins-20190_public/lib/python3.6/site-packages/salome/CF:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Salomemeca_mofem-20190/lib/python3.6/site-packages/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Salomemeca_translator-20190/lib/python3.6/site-packages/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Mfront-TFEL321/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/EUROPLEXUS_201901/lib/python3.6/site-packages/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/EUROPLEXUS_201901/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_svm-05/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_morris-05/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Otgui-v61/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_lm-07/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Lxml-340/lib/python3.6/site-packages
+ADAO_ENGINE_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Adao-V9_3_0_0
+TERM=xterm-256color
+FREEIMAGE_ROOT=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Freeimage-3170
+SALOME_trace=local
+PYTHONHOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Python-365
+LESSOPEN=| /usr/bin/lesspipe %s
+SALOME_HYBRIDPluginResources=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/hybridplugin
+USER=adrian
+DEBIANFORSALOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/debianForSalome
+OPENTURNS_MODULE_CONF_FILE=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Salomemeca_extra-201903_public/custom/config_file_template.py
+NO_PROXY=localhost,127.0.0.0/8,::1
+NSHOST=reiadrian
+HOMARD_ASTER_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Homard_aster-1112_aster
+DSCCODE_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+GNOME_TERMINAL_SERVICE=:1.182
+DLIM8VAR=dlim8 1:1:29030@10.122.51.15/005056010130::9de2ce714bcb5ec8ced9926a1087298ebeca6affe852286633abe41cb4a85b4b
+YACS_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+CSF_StandardDefaults=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Occ-730p3/src/StdResource
+FREETYPE_ROOT=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Freetype-29
+PYTHON_INCLUDE=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Python-365/include/python3.6
+OPENTURNS_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+SALOMEMECA_TRANSLATOR_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Salomemeca_translator-20190
+DISPLAY=:1
+EFICAS_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+SCOTCHDIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Scotch-604
+SHLVL=2
+MATPLOTLIB_HOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Matplotlib-222
+HTTP_PROXY=http://proxyrcia.unne.local:3128/
+QT_IM_MODULE=ibus
+MPLCONFIGDIR=/home/adrian/.config/salome/matplotlib-2.2.2
+JOBMANAGER_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+CSF_MDTVFontDirectory=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Occ-730p3/src/FontMFT
+CPPUNIT_ROOT=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Cppunit-1132
+CSF_PluginDefaults=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Occ-730p3/src/StdResource
+GUI_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+MED3HOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Medfichier-400
+ASTER_VERSION_DIR=/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/../Code_aster_stable-v144_smeca/share/aster
+http_proxy=http://proxyrcia.unne.local:3128/
+DATA_DIR=/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/SAMPLES_V9_3_0
+HexoticPLUGIN_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+CASROOT=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Occ-730p3
+SMESH_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+HDF5_DISABLE_VERSION_CHECK=1
+LIBBATCH_NODEFILE=nodefile-nOUfAuFZOk
+ASTER_TMPDIR=/tmp
+DISABLE_FPE=1
+TFELHOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Mfront-TFEL321
+LD_LIBRARY_PATH=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Python-365/lib:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/lib/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Tcl-860/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Tk-860/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Python-365/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Sip-4193/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Tcl-860/lib/tclx8.4:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Omniorb-422/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Hdf5-1103/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Boost-1580/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Cgal-40/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Cgnslib-331/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Tcl-860/lib/Togl1.7:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Graphviz-2380/lib/graphviz:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Graphviz-2380/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Libxml2-291/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Qt-591/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Muparser-132/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Nlopt-242/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/R-2151/lib/R/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Tbb-424/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_tool-112/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_fftw-06/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Cppunit-1132/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Libbatch-V2_4_1/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Py2cpp-v10/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Metis_aster-510_aster4:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Metis-510/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Freetype-29/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Gl2ps-14020170729/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Freeimage-3170/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Occ-730p3/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Paraview-v560p1/lib/paraview-5.6:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Qwt-612/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Opencv-24135/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Adao_interface-227a599c1e22d/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Medfichier-400/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/YDEFX_V9_3_0/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Metis_aster-510_aster4:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Metis-510/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Medcoupling-V9_3_0/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Meshgems-286/lib/Linux_64:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_robopt-04/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Gmsh-414/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_pmml-16/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Libxslt-1128/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Netgen-531/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Planegcs-018/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/SHAPER_V9_3_0/bin/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/SHAPER_V9_3_0/lib/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Paravisaddons-V9_3_0/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_mixmod-07/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Mumps-512_aster6/SEQ/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Mfront-TFEL321/lib:/usr/lib/atlas-base/atlas:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_stable-v144_smeca/lib/aster:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_svm-05/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_morris-05/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Otgui-v61/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_lm-07/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/debianForSalome/lib:/lib64:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Tcl-860/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Tk-860/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Python-365/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Sip-4193/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Tcl-860/lib/tclx8.4:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Omniorb-422/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Hdf5-1103/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Boost-1580/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Cgal-40/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Cgnslib-331/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Tcl-860/lib/Togl1.7:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Graphviz-2380/lib/graphviz:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Graphviz-2380/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Libxml2-291/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Qt-591/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Muparser-132/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Nlopt-242/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/R-2151/lib/R/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Tbb-424/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_tool-112/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_fftw-06/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Cppunit-1132/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Libbatch-V2_4_1/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Py2cpp-v10/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Metis_aster-510_aster4:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Metis-510/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Freetype-29/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Gl2ps-14020170729/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Freeimage-3170/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Occ-730p3/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Paraview-v560p1/lib/paraview-5.6:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Qwt-612/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Opencv-24135/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Adao_interface-227a599c1e22d/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Medfichier-400/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/YDEFX_V9_3_0/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Metis_aster-510_aster4:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Metis-510/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Medcoupling-V9_3_0/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Meshgems-286/lib/Linux_64:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_robopt-04/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Gmsh-414/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_pmml-16/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Libxslt-1128/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Netgen-531/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Planegcs-018/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/SHAPER_V9_3_0/bin/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/SHAPER_V9_3_0/lib/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Paravisaddons-V9_3_0/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_mixmod-07/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Mumps-512_aster6/SEQ/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Mfront-TFEL321/lib:/usr/lib/atlas-base/atlas:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_stable-v144_smeca/lib/aster:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_svm-05/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_morris-05/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Otgui-v61/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_lm-07/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/debianForSalome/lib:/lib64
+SALOME_StdMeshersResources=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/smesh
+PREFS_CATA_CF=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Salomemeca_plugins-20190_public/lib/python3.6/site-packages/salome/CF
+FIELDS_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+NSPORT=2810
+OTMORRIS_HOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Openturns_morris-05
+XDG_RUNTIME_DIR=/run/user/1000
+SMESH_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/modules/SMESH_V9_3_0
+ATOMIC_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+QTDIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Qt-591
+ZCRACKSHOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Zcracks-292p2
+MEDFICHIER_INSTALL_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Medfichier-400
+PARAVISADDONS_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Paravisaddons-V9_3_0
+TCL_LIBRARY=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Tcl-860/lib/tcl8.6.so
+MEDCOUPLING_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Medcoupling-V9_3_0
+DISTENE_LICENCE_FILE_FOR_YAMS=Use global envvar: DLIM8VAR
+BOOST_ROOT=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Boost-1580
+OMNIORBPY_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Omniorbpy-422
+QWTHOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Qwt-612
+PVHOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Paraview-v560p1
+LRELEASE=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Qt-591/bin/lrelease
+OMNIORB_USERS_PATH=/tmp
+JOURNAL_STREAM=8:46645
+CSF_XSMessage=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Occ-730p3/src/XSMessage
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+CSF_UnitsDefinition=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Occ-730p3/src/UnitsAPI/Units.dat
+PATH=/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/outils:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/bin/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Tcl-860/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Tk-860/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Python-365/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Sip-4193/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Omniorb-422/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Cmake-3121/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Hdf5-1103/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Cgnslib-331/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Pygments-202/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Graphviz-2380/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Libxml2-291/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Swig-3012/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Numpy-1151/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Qt-591/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Pyqt-590/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/R-2151/lib/R/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Docutils-012/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Cppunit-1132/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Metis_aster-510_aster4:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Metis-510/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Miss3d-67_aster2:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Freetype-29/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Paraview-v560p1/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Homard_aster-1112_aster:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Medfichier-400/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Metis_aster-510_aster4:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Metis-510/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Scotch-604/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Medcoupling-V9_3_0/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Meshgems-286/bin/Linux_64:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Cython-0252/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Gmsh-414/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Libxslt-1128/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Pillow-342/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/SHAPER_V9_3_0/bin/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/SHAPER_V9_3_0/lib/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Gmsh_bin-2120Linux64/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Mfront-TFEL321/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Otgui-v61/bin:/tmp/asterstudy_workdir_adrian/adrian-reiadrian-mié-27-181543.531:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Tcl-860/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Tk-860/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Python-365/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Sip-4193/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Omniorb-422/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Cmake-3121/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Hdf5-1103/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Cgnslib-331/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Pygments-202/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Graphviz-2380/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Libxml2-291/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Swig-3012/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Numpy-1151/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Qt-591/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Pyqt-590/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/R-2151/lib/R/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Docutils-012/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Cppunit-1132/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Metis_aster-510_aster4:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Metis-510/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Miss3d-67_aster2:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Freetype-29/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Paraview-v560p1/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Homard_aster-1112_aster:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Medfichier-400/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Metis_aster-510_aster4:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Metis-510/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Scotch-604/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Medcoupling-V9_3_0/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Meshgems-286/bin/Linux_64:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Cython-0252/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Gmsh-414/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Libxslt-1128/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Pillow-342/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/SHAPER_V9_3_0/bin/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/SHAPER_V9_3_0/lib/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Gmsh_bin-2120Linux64/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Mfront-TFEL321/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Otgui-v61/bin:/home/adrian/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+QT_QPA_PLATFORM_PLUGIN_PATH=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Qt-591/plugins/platforms
+PILLOWHOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Pillow-342
+SALOME_GHS3DPluginResources=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/ghs3dplugin
+BOOST_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Boost-1580
+GDMSESSION=ubuntu
+PV_PLUGIN_PATH=/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Paraview-v560p1/lib/paraview-5.6:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/PARAVIS_V9_3_0/lib/paraview:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Paravisaddons-V9_3_0/lib:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/lib/paraview:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Paraview-v560p1/lib/paraview-5.6:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/PARAVIS_V9_3_0/lib/paraview:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Paravisaddons-V9_3_0/lib
+SALOMEMECA_EXTRA_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Salomemeca_extra-201903_public
+CALCULATOR_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+DISTENE_LICENCE_FILE_FOR_MGCLEANER=Use global envvar: DLIM8VAR
+OPENCASCADE_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Occ-730p3
+QTVERSION=5
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+HOMARD_REP_EXE=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Homard_tool-1112hdf51103med400
+ATOMSOLV_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+DOCUMENTATION_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+SALOME_BATCH=0
+QT_PLUGIN_PATH=/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Qt-591/plugins:/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Qt-591/plugins
+LIGHT_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+EFICAS_ROOT=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Eficas_nouveau-V9_3_2
+GENERICSOLVER_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+GL2PS_INSTALL_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Gl2ps-14020170729
+SALOME_BLSURFPluginResources=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/blsurfplugin
+PYLIGHT_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+NLOPT_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Nlopt-242
+ASTERSTUDY_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+PYTHONEXECUTABLE=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Python-365/bin/python
+CYTHON_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Cython-0252
+PYGMENTS_HOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Pygments-202
+ASTER_ETC=/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/etc
+XLWT_HOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Xlwt-130
+LC_NUMERIC=C
+MISS3D_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Miss3d-67_aster2
+OLDPWD=/tmp/asterstudy_workdir_adrian/adrian-reiadrian-mié-27-181543.531
+EUROPLEXUS_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+
+
+>>> 2022/07/27-18:15:45.392  [Shell@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/system.py:519]
+remote command ( <> reiadrian and adrian <> adrian) ? False
+
+>>> 2022/07/27-18:15:45.393  [AddToEnv@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/system.py:813]
+cmd :
+bash -c ". /home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/../Code_aster_stable-v144_smeca/share/aster/profile.sh && env"
+background : False
+follow_output : False
+
+>>> 2022/07/27-18:15:45.428  [AddToEnv@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/system.py:814]
+env_prof
+SHELL=/bin/bash
+SESSION_MANAGER=local/reiadrian:@/tmp/.ICE-unix/1899,unix/reiadrian:/tmp/.ICE-unix/1899
+XLUTILS_HOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Xlutils-200
+SWIG_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Swig-3012
+QT_ACCESSIBILITY=1
+SUITRoot=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome
+GMSHPLUGIN_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+COLORTERM=truecolor
+PYUIC=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Pyqt-590/bin/pyuic5
+CSF_MDTVTexturesDirectory=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Occ-730p3/src/Textures
+OMNIORB_CONFIG=/tmp/.omniORB_adrian_last.cfg
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+MMGT_REENTRANT=1
+EFICAS_NOUVEAU_ROOT=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Eficas_nouveau-V9_3_2
+OTGUI_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Otgui-v61
+XDG_MENU_PREFIX=gnome-
+no_proxy=localhost,127.0.0.0/8,::1
+NETGENPLUGIN_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+CSF_UnitsLexicon=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Occ-730p3/src/UnitsAPI/Lexi_Expr.dat
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+R_HOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/R-2151/lib/R
+SHAPERResources=/home/adrian/SalomeMeca2019//V2019.0.3_universal/modules/SHAPER_V9_3_0/share/salome/resources/shaper
+OPENTURNS_HOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Openturns_tool-112
+SIP_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Sip-4193
+LXML_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Lxml-340
+TK_LIBRARY=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Tk-860/lib/tk8.6
+PV_MACRO_PATH=/home/adrian/.config/salome/Macros
+GEOM_PluginsList=BREPPlugin:STEPPlugin:IGESPlugin:STLPlugin:XAOPlugin:VTKPlugin:AdvancedGEOM
+PYQT_SIPS=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Pyqt-590/share/sip
+CSF_SHMessageStd=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Occ-730p3/src/SHMessageStd
+LANGUAGE=es_AR:es
+TKDIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Tk-860
+PYQT_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Pyqt-590
+CGNSHOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Cgnslib-331
+QWT_INCLUDES=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Qwt-612/include
+CSF_ShHealingDefaults=/tmp/logs/adrian/env_2810
+GNOME_SHELL_SESSION_MODE=ubuntu
+SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+KERNEL_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+MODULES_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/modules
+CSF_GEOMDS_ResourcesDefaults=/tmp/logs/adrian/env_2810
+__name__=SALOME GUI Configuration
+CSF_SALOMEDS_ResourcesDefaults=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/kernel
+PLANEGCS_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Planegcs-018
+NETGENHOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Netgen-531
+SALOMEMECA_PYUTILS_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Salomemeca_pyutils-20190
+GMSH_BIN_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Gmsh_bin-2120Linux64/bin
+ECREVISSE_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Ecrevisse-322
+MESHGEMSHOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Meshgems-286
+GEOM_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+HOMARD_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+SSH_AGENT_PID=1864
+SHAPER_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+SALOME_NETGENPluginResources=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/netgenplugin
+LIBXML_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Libxml2-291
+ROOT_SALOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal
+XLRD_HOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Xlrd-120
+TK_LIBRARY_SO=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Tk-860/lib/libtk8.6.so
+GMSH_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Gmsh-414
+GTK_MODULES=gail:atk-bridge
+ASTER_ROOT=/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190
+PWD=/tmp/asterstudy_workdir_adrian/adrian-reiadrian-mié-27-181543.531
+TOOLS_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools
+ASTER_DATADIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Code_aster_stable-v144_smeca/share/aster
+PLUGINS_CONFIG_FILE=/home/adrian/SalomeMeca2019//V2019.0.3_universal/modules/SHAPER_V9_3_0/share/salome/resources/shaper
+ATOMGEN_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+XDG_SESSION_DESKTOP=ubuntu
+LOGNAME=adrian
+QT_QPA_PLATFORMTHEME=gtk2
+HELLO_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+XDG_SESSION_TYPE=x11
+OTGUI_HTML_DOCUMENTATION_PATH=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Otgui-v61/share/otgui/doc/html/
+GPG_AGENT_INFO=/run/user/1000/gnupg/S.gpg-agent:0:1
+MESHGEMS_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Meshgems-286
+PREREQUISITES_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites
+SALOME_PLUGINS_PATH=/home/adrian/SalomeMeca2019/V2019.0.3_universal/plugins:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Salomemeca_plugins-20190_public/lib/python3.6/site-packages/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Salomemeca_mofem-20190/lib/python3.6/site-packages/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Salomemeca_translator-20190/lib/python3.6/site-packages/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/plugins:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Salomemeca_plugins-20190_public/lib/python3.6/site-packages/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Salomemeca_mofem-20190/lib/python3.6/site-packages/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Salomemeca_translator-20190/lib/python3.6/site-packages/salome
+EIGEN_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Eigen-334
+XAUTHORITY=/run/user/1000/gdm/Xauthority
+CSF_StandardLiteDefaults=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Occ-730p3/src/StdResource
+BLSURFPLUGIN_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+HDF5HOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Hdf5-1103
+ASTER_STABLE=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Code_aster_stable-v144_smeca
+SALOME_MODULES_ORDER=SHAPER:GEOM:SMESH
+ABSOLUTE_APPLI_PATH=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+YDEFX_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+DOCUTILS_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Docutils-012
+TCLDIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Tcl-860
+WINDOWPATH=2
+__place_holder__=0
+HOME=/home/adrian
+USERNAME=adrian
+WISHEXECUTABLE=
+IM_CONFIG_PHASE=1
+LANG=es_AR.UTF-8
+GHS3DPLUGIN_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+LIBBATCH_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Libbatch-V2_4_1
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+SALOME_HEXABLOCKPluginResources=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/hexablockplugin
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+ADAO_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+NUMPY_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Numpy-1151
+R_LIBS=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Rotrpackage-146":/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Rotrpackage-146
+PYTHONSTARTUP=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Python-365/pythonrc.py
+SalomeAppConfig=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/gui:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/asterstudy:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/shaper:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/geom:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/smesh:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/paravis:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/fields:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/yacs:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/jobmanager:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/homard:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/openturns:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/adao:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/netgenplugin:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/calculator:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/hybridplugin:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/hexoticplugin:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/ghs3dplugin:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/europlexus:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/blsurfplugin:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/gmshplugin::
+HOMARD_EXE=homard
+VTE_VERSION=6003
+SALOMEMECA_MOFEM_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Salomemeca_mofem-20190
+GRAPHVIZHOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Graphviz-2380
+SALOMEPATH=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+SALOME_GMSHPluginResources=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/gmshplugin
+SALOME_HexoticPLUGINResources=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/hexoticplugin
+OpenCASCADE_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Occ-730p3
+HYBRIDPLUGIN_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+PARAVIS_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+SALOMEMECA_PLUGINS_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Salomemeca_plugins-20190_public
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/6b084142_7320_4439_9e20_0b49b937c414
+METISDIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Metis_aster-510_aster4,/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Metis-510
+PARAVIS_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/modules/PARAVIS_V9_3_0
+TCL_LIBRARY_SO=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Tcl-860/lib/libtcl8.6.so
+ADAO_INTERFACE_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Adao_interface-227a599c1e22d
+OMNIORB_USER_PATH=/tmp
+INVOCATION_ID=9450fc2bfc424aff9b2d0ee946cd8492
+PY2CPP_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Py2cpp-v10
+MANAGERPID=1644
+ASTER_LIBDIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Code_aster_stable-v144_smeca/lib/aster
+LIBXSLT_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Libxslt-1128
+DISTENE_LICENSE_FILE=Use global envvar: DLIM8VAR
+CSF_XmlOcafResource=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Occ-730p3/src/XmlOcafResource
+OMNIORB_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Omniorb-422
+APPLI=SalomeMeca2019/appli_V2019.0.3_universal
+SMESH_MeshersList=StdMeshers:HEXABLOCKPlugin:NETGENPlugin:GMSHPlugin:BLSURFPlugin:GHS3DPlugin:HYBRIDPlugin:HexoticPLUGIN
+CSF_SHMessage=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Occ-730p3/src/SHMessage
+SAMPLES_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/modules/SAMPLES_V9_3_0
+PYHELLO_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+PVVERSION=5.6
+LESSCLOSE=/usr/bin/lesspipe %s %s
+XDG_SESSION_CLASS=user
+SWIG_LIB=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Swig-3012/share/swig/3.0.12
+BOOSTDIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Boost-1580
+HEXABLOCK_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+HEXABLOCKPLUGIN_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+PYTHONPATH=.:/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Code_aster_stable-v144_smeca/lib/aster:/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Numpy-1151/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Mfront-TFEL321/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Boost-1580/lib/python3.6/site-packages:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Openturns_mixmod-07-cm3121-ot1120-py365-sw3012/lib/python3.6/site-packages:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/modules/install/SHAPER_V9_3_0/bin/salome:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/modules/install/SHAPER_V9_3_0/lib/salome:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Xlrd-120-py365/lib/python3.6/site-packages:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Openturns_wrapy-07_EDFEDFp1-ot1120-py365-set3840/lib/python3.6/site-packages:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Pillow-342-py365/lib/python3.6/site-packages:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Gnuplotpy-183k-nu1151-py365/lib/python3.6/site-packages:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Zcracks-292p2/plugin:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Xlwt-130-py365/lib/python3.6/site-packages:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Openturns_pmml-16-cm3121-ot1120-py365-sw3012/lib/python3.6/site-packages:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/H5py-280-cyt0252-hdf51103-num1151-py365-set3840/lib/python3.6/site-packages:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Cython-0252-py365/lib/python3.6/site-packages:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Xlutils-200-py365/lib/python3.6/site-packages:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Openturns_robopt-04-cm3121-ot1120-py365-sw3012/lib/python3.6/site-packages:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/modules/install/SMESH_V9_3_0/share/salome/plugins/smesh/Verima:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/modules/install/ASTERSTUDY_201903/lib/python3.6/site-packages:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/modules/install/ASTERSTUDY_201903/lib/python3.6/site-packages/salome:/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/tools/install/Medcoupling-V9_3_0/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Medfichier-400/lib/python3.6/site-packages:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/tools/install/Adao-V9_3_0_0/lib/python3.6/site-packages:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Paraview-v560p1-cm3121-dox1814-gl2ps1401-gr2380-hd1103-xml2291-mup132-ot1120-py365-qt591/lib/paraview-5.6/site-packages/vtkmodules:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Paraview-v560p1-cm3121-dox1814-gl2ps1401-gr2380-hd1103-xml2291-mup132-ot1120-py365-qt591/lib/paraview-5.6/site-packages:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Paraview-v560p1-cm3121-dox1814-gl2ps1401-gr2380-hd1103-xml2291-mup132-ot1120-py365-qt591/lib/paraview-5.6:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Omniorbpy-422EDFp1-orb422-py365/lib/python3.6/site-packages/omniidl_be:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Omniorbpy-422EDFp1-orb422-py365/lib/python3.6/site-packages:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/tools/install/Libbatch-V2_4_1-cm3121-py365-sw3012/lib/python3.6/site-packages:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Openturns_fftw-06-cm3121-ot1120-py365-sw3012/lib/python3.6/site-packages:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Openturns_tool-112-bst1580-cm3121-dox1814-gr2380-la380-xm291-mpl222-mup132-num1151-py365-r2151-ro146-sci0191-sw3012-tbb424/lib/python3.6/site-packages:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Jinja-273-py365-set3840/lib/python3.6/site-packages:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Docutils-012-py365/lib/python3.6/site-packages:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Scipy-0191-la380-nu1151-py365-sw3012/lib/python3.6/site-packages:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Nlopt-242-py365/lib/python3.6/site-packages:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Matplotlib-222-num1151-pyqt590-py365-set3840/lib/python3.6/site-packages:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Pyqt-590-py365-qt591-sip4193/lib/python3.6/site-packages:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Pygments-202-py365-set3840/lib/python3.6/site-packages:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Omniorb-422-py365/lib/python3.6/site-packages:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Sip-4193-py365/lib/python3.6/site-packages:__MERCURIAL_INSTALL_PATH__/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Numpy-1151/lib/python3.6/site-packages/numpy-1.15.1-py3.6-linux-x86_64.egg:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Xlrd-120-py365/lib/python3.6/site-packages/xlrd-1.2.0-py3.6.egg:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Openturns_wrapy-07_EDFEDFp1-ot1120-py365-set3840/lib/python3.6/site-packages/otwrapy-0.7-py3.6.egg:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Pillow-342-py365/lib/python3.6/site-packages/Pillow-3.4.2-py3.6-linux-x86_64.egg:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Xlwt-130-py365/lib/python3.6/site-packages/xlwt-1.3.0-py3.6.egg:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/H5py-280-cyt0252-hdf51103-num1151-py365-set3840/lib/python3.6/site-packages/h5py-2.8.0-py3.6-linux-x86_64.egg:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Matplotlib-222-num1151-pyqt590-py365-set3840/six-1.12.0-py3.6.egg:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Cython-0252-py365/lib/python3.6/site-packages/Cython-0.25.2-py3.6-linux-x86_64.egg:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Xlutils-200-py365/lib/python3.6/site-packages/xlutils-2.0.0-py3.6.egg:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Xlutils-200-py365/xlwt-1.3.0-py3.6.egg:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Xlutils-200-py365/xlrd-1.2.0-py3.6.egg:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Omniorbpy-422EDFp1-orb422-py365/lib/python3.6/site-packages/omniORB/COS:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Jinja-273-py365-set3840/lib/python3.6/site-packages/Jinja2-2.7.3-py3.6.egg:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Jinja-273-py365-set3840/MarkupSafe-1.1.1-py3.6-linux-x86_64.egg:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Scipy-0191-la380-nu1151-py365-sw3012/lib/python3.6/site-packages/scipy-0.19.1-py3.6-linux-x86_64.egg:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Matplotlib-222-num1151-pyqt590-py365-set3840/lib/python3.6/site-packages/matplotlib-2.2.2-py3.6-linux-x86_64.egg:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Matplotlib-222-num1151-pyqt590-py365-set3840/kiwisolver-1.0.1-py3.6-linux-x86_64.egg:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Matplotlib-222-num1151-pyqt590-py365-set3840/pytz-2015.2-py3.6.egg:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Matplotlib-222-num1151-pyqt590-py365-set3840/python_dateutil-2.5.0-py3.6.egg:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Matplotlib-222-num1151-pyqt590-py365-set3840/pyparsing-2.0.3-py3.6.egg:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Matplotlib-222-num1151-pyqt590-py365-set3840/cycler-0.10.0-py3.6.egg:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Pygments-202-py365-set3840/lib/python3.6/site-packages/Pygments-2.0.2-py3.6.egg:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/lib/python3.6/site-packages/salome/shared_modules:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/lib/python3.6/site-packages/salome:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/lib/salome:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/bin/salome:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/europlexus:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/KERNEL_V9_3_0/bin/salome/appliskel:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Python-365/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Sip-4193/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Omniorb-422/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Pygments-202/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Numpy-1151/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Pyqt-590/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Matplotlib-222/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Nlopt-242/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Scipy-0191/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Docutils-012/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Jinja-273/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_tool-112/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_fftw-06/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Libbatch-V2_4_1/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Omniorbpy-422/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Omniorbpy-422/lib/python3.6/site-packages/omniidl_be:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Salomemeca_pyutils-20190/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Paraview-v560p1/lib/paraview-5.6:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Paraview-v560p1/lib/paraview-5.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Paraview-v560p1/lib/paraview-5.6/site-packages/vtkmodules:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Adao-V9_3_0_0/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Medfichier-400/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Medcoupling-V9_3_0/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/ASTERSTUDY_201903/lib/python3.6/site-packages/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/ASTERSTUDY_201903/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/SMESH_V9_3_0/share/salome/plugins/smesh/Verima:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_robopt-04/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Xlutils-200/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Cython-0252/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/H5py-280/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_pmml-16/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Xlwt-130/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Zcracks-292p2/plugin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Gnuplotpy-183k/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Pillow-342/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_wrapy-07_EDF/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Xlrd-120/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/SHAPER_V9_3_0/bin/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/SHAPER_V9_3_0/lib/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_mixmod-07/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Salomemeca_plugins-20190_public/lib/python3.6/site-packages/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Salomemeca_plugins-20190_public/lib/python3.6/site-packages/salome/CF:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Salomemeca_mofem-20190/lib/python3.6/site-packages/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Salomemeca_translator-20190/lib/python3.6/site-packages/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Mfront-TFEL321/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/EUROPLEXUS_201901/lib/python3.6/site-packages/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/EUROPLEXUS_201901/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_svm-05/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_morris-05/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Otgui-v61/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_lm-07/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Lxml-340/lib/python3.6/site-packages:/tmp/asterstudy_workdir_adrian/adrian-reiadrian-mié-27-181543.531:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Python-365/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Sip-4193/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Omniorb-422/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Pygments-202/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Numpy-1151/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Pyqt-590/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Matplotlib-222/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Nlopt-242/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Scipy-0191/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Docutils-012/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Jinja-273/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_tool-112/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_fftw-06/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Libbatch-V2_4_1/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Omniorbpy-422/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Omniorbpy-422/lib/python3.6/site-packages/omniidl_be:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Salomemeca_pyutils-20190/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Paraview-v560p1/lib/paraview-5.6:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Paraview-v560p1/lib/paraview-5.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Paraview-v560p1/lib/paraview-5.6/site-packages/vtkmodules:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Adao-V9_3_0_0/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Medfichier-400/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Medcoupling-V9_3_0/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/ASTERSTUDY_201903/lib/python3.6/site-packages/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/ASTERSTUDY_201903/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/SMESH_V9_3_0/share/salome/plugins/smesh/Verima:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_robopt-04/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Xlutils-200/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Cython-0252/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/H5py-280/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_pmml-16/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Xlwt-130/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Zcracks-292p2/plugin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Gnuplotpy-183k/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Pillow-342/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_wrapy-07_EDF/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Xlrd-120/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/SHAPER_V9_3_0/bin/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/SHAPER_V9_3_0/lib/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_mixmod-07/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Salomemeca_plugins-20190_public/lib/python3.6/site-packages/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Salomemeca_plugins-20190_public/lib/python3.6/site-packages/salome/CF:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Salomemeca_mofem-20190/lib/python3.6/site-packages/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Salomemeca_translator-20190/lib/python3.6/site-packages/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Mfront-TFEL321/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/EUROPLEXUS_201901/lib/python3.6/site-packages/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/EUROPLEXUS_201901/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_svm-05/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_morris-05/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Otgui-v61/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_lm-07/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Lxml-340/lib/python3.6/site-packages
+ADAO_ENGINE_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Adao-V9_3_0_0
+TERM=xterm-256color
+FREEIMAGE_ROOT=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Freeimage-3170
+SALOME_trace=local
+ASTER_LOCALEDIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Code_aster_stable-v144_smeca/share/locale/aster
+PYTHONHOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Python-365
+LESSOPEN=| /usr/bin/lesspipe %s
+SALOME_HYBRIDPluginResources=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/hybridplugin
+USER=adrian
+DEBIANFORSALOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/debianForSalome
+OPENTURNS_MODULE_CONF_FILE=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Salomemeca_extra-201903_public/custom/config_file_template.py
+NO_PROXY=localhost,127.0.0.0/8,::1
+NSHOST=reiadrian
+HOMARD_ASTER_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Homard_aster-1112_aster
+DSCCODE_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+GNOME_TERMINAL_SERVICE=:1.182
+DLIM8VAR=dlim8 1:1:29030@10.122.51.15/005056010130::9de2ce714bcb5ec8ced9926a1087298ebeca6affe852286633abe41cb4a85b4b
+YACS_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+CSF_StandardDefaults=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Occ-730p3/src/StdResource
+FREETYPE_ROOT=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Freetype-29
+PYTHON_INCLUDE=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Python-365/include/python3.6
+OPENTURNS_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+SALOMEMECA_TRANSLATOR_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Salomemeca_translator-20190
+DISPLAY=:1
+EFICAS_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+SCOTCHDIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Scotch-604
+SHLVL=2
+MATPLOTLIB_HOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Matplotlib-222
+HTTP_PROXY=http://proxyrcia.unne.local:3128/
+QT_IM_MODULE=ibus
+MPLCONFIGDIR=/home/adrian/.config/salome/matplotlib-2.2.2
+JOBMANAGER_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+CSF_MDTVFontDirectory=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Occ-730p3/src/FontMFT
+CPPUNIT_ROOT=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Cppunit-1132
+CSF_PluginDefaults=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Occ-730p3/src/StdResource
+GUI_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+MED3HOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Medfichier-400
+ASTER_VERSION_DIR=/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/../Code_aster_stable-v144_smeca/share/aster
+http_proxy=http://proxyrcia.unne.local:3128/
+DATA_DIR=/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/SAMPLES_V9_3_0
+HexoticPLUGIN_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+CASROOT=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Occ-730p3
+SMESH_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+HDF5_DISABLE_VERSION_CHECK=1
+LIBBATCH_NODEFILE=nodefile-nOUfAuFZOk
+ASTER_TMPDIR=/tmp
+DISABLE_FPE=1
+TFELHOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Mfront-TFEL321
+LD_LIBRARY_PATH=.:/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Code_aster_stable-v144_smeca/lib/aster:/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Hdf5-1103/lib:/lib:/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Medfichier-400/lib:/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Metis_aster-510_aster4/lib:/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Mfront-TFEL321/lib:/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Mumps-512_aster6/SEQ/lib:/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Mumps-512_aster6/SEQ/libseq:/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Python-365/lib:/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Scotch_aster-604_aster7/SEQ/lib:/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Code_aster_stable-v144_smeca/lib:/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Lapack-380/lib:/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Boost-1580/lib:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/modules/install/EFICAS_V9_3_0/lib/salome:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/modules/install/LIGHT_V9_3_0/lib/salome:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/modules/install/SHAPER_V9_3_0/lib/salome:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/modules/install/GENERICSOLVER_V9_3_0/lib/salome:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/modules/install/NETGENPLUGIN_V9_3_0/lib/salome:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/modules/install/JOBMANAGER_V9_3_0/lib/salome:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/modules/install/HOMARD_V9_3_0/lib/salome:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/modules/install/HEXOTICPLUGIN_V9_3_0/lib/salome:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/modules/install/BLSURFPLUGIN_V9_3_0/lib/salome:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/modules/install/GHS3DPLUGIN_V9_3_0/lib/salome:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/modules/install/PARAVIS_V9_3_0/lib/salome:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/modules/install/FIELDS_V9_3_0/lib/salome:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/modules/install/HEXABLOCKPLUGIN_V9_3_0/lib/salome:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/modules/install/HEXABLOCK_V9_3_0/lib/salome:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/modules/install/ATOMSOLV_V9_3_0/lib/salome:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/modules/install/HYBRIDPLUGIN_V9_3_0/lib/salome:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/modules/install/SMESH_V9_3_0/lib/salome:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/modules/install/ASTERSTUDY_201903/lib/salome:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/modules/install/PYHELLO1_V9_3_0/lib/salome:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/modules/install/YDEFX_V9_3_0/lib/salome:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/modules/install/YACS_V9_3_0/lib/salome:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/modules/install/HELLO1_V9_3_0/lib/salome:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/modules/install/ATOMGEN_V9_3_0/lib/salome:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/modules/install/ATOMIC_V9_3_0/lib/salome:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/modules/install/GEOM_V9_3_0/lib/salome:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/modules/install/GUI_smeca_gui/lib/salome:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/modules/install/KERNEL_V9_3_0/lib/salome:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Openturns_mixmod-07-cm3121-ot1120-py365-sw3012/lib:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/tools/install/Paravisaddons-V9_3_0-cm3121/lib:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/modules/install/SHAPER_V9_3_0/bin/salome:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Planegcs-018-bst1580-cm3121-ei334/lib:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/tools/install/Netgen-531-occ731-tcl860-tix841-tk860-togl17/lib:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Libxslt-1128-xml291/lib:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Openturns_pmml-16-cm3121-ot1120-py365-sw3012/lib:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Gmsh-414-cm3121-la380-occ731-tbb424/lib:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Openturns_robopt-04-cm3121-ot1120-py365-sw3012/lib:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Meshgems-286/lib/Linux_64:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/tools/install/Medcoupling-V9_3_0/lib:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Metis-510/lib:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/modules/install/YDEFX_V9_3_0/lib:/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Code_aster_frontend-20190/lib:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/tools/install/Adao_interface-227a599c1e22d/lib:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Opencv-24135-cm3121-py365-tbb424/lib:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Qwt-612-qt591/lib:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Paraview-v560p1-cm3121-dox1814-gl2ps1401-gr2380-hd1103-xml2291-mup132-ot1120-py365-qt591/lib/paraview-5.6:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Occ-730p3-freeimg3170-freetp29-gl2ps1401-tbb424/lib:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Freeimage-3170EDFp2/lib:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Gl2ps-14020170729EDFp1-cm3121/lib:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Freetype-29/lib:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/tools/install/Py2cpp-v10/lib:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/tools/install/Libbatch-V2_4_1-cm3121-py365-sw3012/lib:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Cppunit-1132/lib:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Openturns_fftw-06-cm3121-ot1120-py365-sw3012/lib:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Openturns_tool-112-bst1580-cm3121-dox1814-gr2380-la380-xm291-mpl222-mup132-num1151-py365-r2151-ro146-sci0191-sw3012-tbb424/lib:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Tbb-424/lib:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/R-2151/lib/R/lib:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Nlopt-242-py365/lib:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Muparser-132/lib:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Qt-591_nowebengine/lib:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Libxml2-291-py365/lib:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Graphviz-2380/lib/graphviz:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Graphviz-2380/lib:/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Tcl-860/lib/Togl1.7:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Cgnslib-331-cm3121-hd1103/lib:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Cgal-40EDFp1-boost1580-cmake3121-lapack380/lib:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Omniorb-422-py365/lib:/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Tcl-860/lib/tclx8.4:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Sip-4193-py365/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Tk-860/lib:/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Tcl-860/lib:/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Code_aster_stable-v144_smeca/lib/aster:/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Python-365/lib:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/lib/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Tcl-860/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Tk-860/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Python-365/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Sip-4193/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Tcl-860/lib/tclx8.4:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Omniorb-422/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Hdf5-1103/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Boost-1580/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Cgal-40/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Cgnslib-331/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Tcl-860/lib/Togl1.7:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Graphviz-2380/lib/graphviz:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Graphviz-2380/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Libxml2-291/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Qt-591/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Muparser-132/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Nlopt-242/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/R-2151/lib/R/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Tbb-424/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_tool-112/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_fftw-06/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Cppunit-1132/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Libbatch-V2_4_1/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Py2cpp-v10/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Metis_aster-510_aster4:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Metis-510/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Freetype-29/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Gl2ps-14020170729/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Freeimage-3170/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Occ-730p3/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Paraview-v560p1/lib/paraview-5.6:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Qwt-612/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Opencv-24135/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Adao_interface-227a599c1e22d/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Medfichier-400/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/YDEFX_V9_3_0/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Metis_aster-510_aster4:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Metis-510/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Medcoupling-V9_3_0/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Meshgems-286/lib/Linux_64:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_robopt-04/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Gmsh-414/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_pmml-16/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Libxslt-1128/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Netgen-531/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Planegcs-018/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/SHAPER_V9_3_0/bin/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/SHAPER_V9_3_0/lib/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Paravisaddons-V9_3_0/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_mixmod-07/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Mumps-512_aster6/SEQ/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Mfront-TFEL321/lib:/usr/lib/atlas-base/atlas:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_stable-v144_smeca/lib/aster:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_svm-05/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_morris-05/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Otgui-v61/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_lm-07/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/debianForSalome/lib:/lib64:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Tcl-860/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Tk-860/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Python-365/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Sip-4193/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Tcl-860/lib/tclx8.4:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Omniorb-422/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Hdf5-1103/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Boost-1580/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Cgal-40/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Cgnslib-331/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Tcl-860/lib/Togl1.7:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Graphviz-2380/lib/graphviz:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Graphviz-2380/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Libxml2-291/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Qt-591/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Muparser-132/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Nlopt-242/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/R-2151/lib/R/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Tbb-424/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_tool-112/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_fftw-06/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Cppunit-1132/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Libbatch-V2_4_1/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Py2cpp-v10/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Metis_aster-510_aster4:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Metis-510/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Freetype-29/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Gl2ps-14020170729/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Freeimage-3170/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Occ-730p3/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Paraview-v560p1/lib/paraview-5.6:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Qwt-612/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Opencv-24135/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Adao_interface-227a599c1e22d/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Medfichier-400/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/YDEFX_V9_3_0/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Metis_aster-510_aster4:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Metis-510/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Medcoupling-V9_3_0/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Meshgems-286/lib/Linux_64:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_robopt-04/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Gmsh-414/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_pmml-16/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Libxslt-1128/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Netgen-531/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Planegcs-018/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/SHAPER_V9_3_0/bin/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/SHAPER_V9_3_0/lib/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Paravisaddons-V9_3_0/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_mixmod-07/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Mumps-512_aster6/SEQ/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Mfront-TFEL321/lib:/usr/lib/atlas-base/atlas:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_stable-v144_smeca/lib/aster:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_svm-05/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_morris-05/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Otgui-v61/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Openturns_lm-07/lib:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/debianForSalome/lib:/lib64
+SALOME_StdMeshersResources=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/smesh
+PREFS_CATA_CF=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Salomemeca_plugins-20190_public/lib/python3.6/site-packages/salome/CF
+FIELDS_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+NSPORT=2810
+OTMORRIS_HOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Openturns_morris-05
+XDG_RUNTIME_DIR=/run/user/1000
+SMESH_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/modules/SMESH_V9_3_0
+ATOMIC_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+QTDIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Qt-591
+ZCRACKSHOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Zcracks-292p2
+MEDFICHIER_INSTALL_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Medfichier-400
+PARAVISADDONS_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Paravisaddons-V9_3_0
+TCL_LIBRARY=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Tcl-860/lib/tcl8.6.so
+MEDCOUPLING_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Medcoupling-V9_3_0
+DISTENE_LICENCE_FILE_FOR_YAMS=Use global envvar: DLIM8VAR
+BOOST_ROOT=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Boost-1580
+OMNIORBPY_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Omniorbpy-422
+QWTHOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Qwt-612
+PVHOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Paraview-v560p1
+LRELEASE=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Qt-591/bin/lrelease
+OMNIORB_USERS_PATH=/tmp
+JOURNAL_STREAM=8:46645
+CSF_XSMessage=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Occ-730p3/src/XSMessage
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+CSF_UnitsDefinition=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Occ-730p3/src/UnitsAPI/Units.dat
+PATH=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Mfront-TFEL321/bin:/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Python-365/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/outils:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/bin/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Tcl-860/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Tk-860/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Python-365/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Sip-4193/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Omniorb-422/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Cmake-3121/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Hdf5-1103/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Cgnslib-331/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Pygments-202/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Graphviz-2380/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Libxml2-291/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Swig-3012/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Numpy-1151/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Qt-591/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Pyqt-590/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/R-2151/lib/R/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Docutils-012/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Cppunit-1132/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Metis_aster-510_aster4:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Metis-510/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Miss3d-67_aster2:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Freetype-29/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Paraview-v560p1/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Homard_aster-1112_aster:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Medfichier-400/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Metis_aster-510_aster4:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Metis-510/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Scotch-604/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Medcoupling-V9_3_0/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Meshgems-286/bin/Linux_64:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Cython-0252/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Gmsh-414/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Libxslt-1128/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Pillow-342/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/SHAPER_V9_3_0/bin/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/SHAPER_V9_3_0/lib/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Gmsh_bin-2120Linux64/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Mfront-TFEL321/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Otgui-v61/bin:/tmp/asterstudy_workdir_adrian/adrian-reiadrian-mié-27-181543.531:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Tcl-860/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Tk-860/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Python-365/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Sip-4193/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Omniorb-422/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Cmake-3121/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Hdf5-1103/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Cgnslib-331/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Pygments-202/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Graphviz-2380/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Libxml2-291/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Swig-3012/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Numpy-1151/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Qt-591/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Pyqt-590/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/R-2151/lib/R/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Docutils-012/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Cppunit-1132/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Metis_aster-510_aster4:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Metis-510/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Miss3d-67_aster2:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Freetype-29/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Paraview-v560p1/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Homard_aster-1112_aster:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Medfichier-400/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Metis_aster-510_aster4:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Metis-510/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Scotch-604/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Medcoupling-V9_3_0/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Meshgems-286/bin/Linux_64:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Cython-0252/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Gmsh-414/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Libxslt-1128/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Pillow-342/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/SHAPER_V9_3_0/bin/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/SHAPER_V9_3_0/lib/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Gmsh_bin-2120Linux64/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Mfront-TFEL321/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Otgui-v61/bin:/home/adrian/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+QT_QPA_PLATFORM_PLUGIN_PATH=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Qt-591/plugins/platforms
+PILLOWHOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Pillow-342
+SALOME_GHS3DPluginResources=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/ghs3dplugin
+BOOST_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Boost-1580
+GDMSESSION=ubuntu
+PV_PLUGIN_PATH=/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Paraview-v560p1/lib/paraview-5.6:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/PARAVIS_V9_3_0/lib/paraview:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Paravisaddons-V9_3_0/lib:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/lib/paraview:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Paraview-v560p1/lib/paraview-5.6:/home/adrian/SalomeMeca2019/V2019.0.3_universal/modules/PARAVIS_V9_3_0/lib/paraview:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Paravisaddons-V9_3_0/lib
+SALOMEMECA_EXTRA_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Salomemeca_extra-201903_public
+CALCULATOR_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+DISTENE_LICENCE_FILE_FOR_MGCLEANER=Use global envvar: DLIM8VAR
+OPENCASCADE_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Occ-730p3
+QTVERSION=5
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+ASTER_ELEMENTSDIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Code_aster_stable-v144_smeca/lib/aster
+HOMARD_REP_EXE=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Homard_tool-1112hdf51103med400
+ATOMSOLV_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+DOCUMENTATION_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+SALOME_BATCH=0
+QT_PLUGIN_PATH=/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Qt-591/plugins:/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Qt-591/plugins
+LIGHT_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+EFICAS_ROOT=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Eficas_nouveau-V9_3_2
+GENERICSOLVER_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+GL2PS_INSTALL_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Gl2ps-14020170729
+SALOME_BLSURFPluginResources=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/share/salome/resources/blsurfplugin
+PYLIGHT_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+NLOPT_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Nlopt-242
+ASTERSTUDY_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+PYTHONEXECUTABLE=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Python-365/bin/python
+CYTHON_ROOT_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Cython-0252
+PYGMENTS_HOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Pygments-202
+ASTER_ETC=/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/etc
+XLWT_HOME=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Xlwt-130
+LC_NUMERIC=C
+MISS3D_DIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Miss3d-67_aster2
+OLDPWD=/tmp/asterstudy_workdir_adrian/adrian-reiadrian-mié-27-181543.531
+EUROPLEXUS_ROOT_DIR=/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal
+_=/usr/bin/env
+
+
+>>> 2022/07/27-18:15:45.429  [AddToEnv@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/system.py:822]
+AddToEnv set : ASTER_DATADIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Code_aster_stable-v144_smeca/share/aster
+
+>>> 2022/07/27-18:15:45.429  [AddToEnv@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/system.py:822]
+AddToEnv set : ASTER_LIBDIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Code_aster_stable-v144_smeca/lib/aster
+
+>>> 2022/07/27-18:15:45.429  [AddToEnv@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/system.py:822]
+AddToEnv set : PYTHONPATH=.:/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Code_aster_stable-v144_smeca/lib/aster:/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Numpy-1151/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Mfront-TFEL321/lib/python3.6/site-packages:/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Boost-1580/lib/python3.6/site-packages:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/prerequisites/install/Openturns_mixmod-07-cm3121-ot1120-py365-sw3012/lib/python3.6/site-packages:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/modules/install/SHAPER_V9_3_0/bin/salome:/home/A21173/smeca/yamm_build/V2019.0.3_pub_build/V2019_universal/modules/install/SHAPER_V9_3_0/lib/salome:/home/A
+[...]
+
+>>> 2022/07/27-18:15:45.430  [AddToEnv@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/system.py:822]
+AddToEnv set : ASTER_LOCALEDIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Code_aster_stable-v144_smeca/share/locale/aster
+
+>>> 2022/07/27-18:15:45.430  [AddToEnv@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/system.py:822]
+AddToEnv set : LD_LIBRARY_PATH=.:/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Code_aster_stable-v144_smeca/lib/aster:/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Hdf5-1103/lib:/lib:/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Medfichier-400/lib:/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Metis_aster-510_aster4/lib:/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Mfront-TFEL321/lib:/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Mumps-512_aster6/SEQ/lib:/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Mumps-512_aster6/SEQ/libseq:/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Python-365/lib:/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Scotch_aster-604_
+[...]
+
+>>> 2022/07/27-18:15:45.430  [AddToEnv@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/system.py:822]
+AddToEnv set : PATH=/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Mfront-TFEL321/bin:/home/adrian/SalomeMeca2019//V2019.0.3_universal/prerequisites/Python-365/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/outils:/home/adrian/SalomeMeca2019/appli_V2019.0.3_universal/bin/salome:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Tcl-860/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Tk-860/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Python-365/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Sip-4193/bin:/home/adrian/SalomeMeca2019/V2019.0.3_universal/prerequisites/Omniorb-422/bin:/home/a
+[...]
+
+>>> 2022/07/27-18:15:45.430  [AddToEnv@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/system.py:822]
+AddToEnv set : ASTER_ELEMENTSDIR=/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Code_aster_stable-v144_smeca/lib/aster
+
+>>> 2022/07/27-18:15:45.430  [RunAster@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/execute.py:201]
+set_rep_trav() > local=/tmp/adrian-reiadrian-interactif_28063-0005-reiadrian, global=/tmp/adrian-reiadrian-interactif_28063-0005-reiadrian
+
+>>> 2022/07/27-18:15:45.445  [_dbg@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/profil.py:46]
+P memory_limit: 2048.0    P memjob: 2097152    A memjeveux: 256.0
+
+>>> 2022/07/27-18:15:45.446  [_dbg@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/profil.py:46]
+P time_limit: 900.0    P tpsjob: 16    A tpmax: 900.0
+
+>>> 2022/07/27-18:15:45.446  [RunAster@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/execute.py:208]
+source list : ('/tmp/astk_adrian/adrian-reiadrian-profil_astk_28063-0005-reiadrian',)
+destination : export
+
+>>> 2022/07/27-18:15:45.447  [RunAster@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/execute.py:208]
+cmd :
+cp -L -r /tmp/astk_adrian/adrian-reiadrian-profil_astk_28063-0005-reiadrian export
+background : False
+follow_output : False
+
+>>> 2022/07/27-18:15:45.461  [RunAster@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/execute.py:221]
+source list : ('/tmp/astk_adrian/adrian-reiadrian-profil_astk_28063-0005-reiadrian',)
+destination : /tmp/adrian-reiadrian-interactif_28063-0005-reiadrian/28063-0005-reiadrian.export
+
+>>> 2022/07/27-18:15:45.461  [RunAster@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/execute.py:221]
+cmd :
+cp -L -r /tmp/astk_adrian/adrian-reiadrian-profil_astk_28063-0005-reiadrian /tmp/adrian-reiadrian-interactif_28063-0005-reiadrian/28063-0005-reiadrian.export
+background : False
+follow_output : False
+
+>>> 2022/07/27-18:15:45.472  [RunAster@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/execute.py:402]
+Start make_etude/make_env/make_dbg action
+
+>>> 2022/07/27-18:15:45.474  [copyfileD@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/execution.py:574]
+source list : ('/tmp/asterstudy_workdir_adrian/adrian-reiadrian-mié-27-181543.531/RunCase_1_Stage_1.comm',)
+destination : fort.1.1
+
+>>> 2022/07/27-18:15:45.474  [copyfileD@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/execution.py:574]
+cmd :
+cp -L -r /tmp/asterstudy_workdir_adrian/adrian-reiadrian-mié-27-181543.531/RunCase_1_Stage_1.comm fort.1.1
+background : False
+follow_output : False
+
+>>> 2022/07/27-18:15:45.485  [Shell@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/system.py:519]
+remote command ( <> reiadrian and adrian <> adrian) ? False
+
+>>> 2022/07/27-18:15:45.485  [_check_filetype@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/system.py:711]
+cmd :
+file fort.1.1
+background : False
+follow_output : False
+
+>>> 2022/07/27-18:15:45.500  [copyfileD@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/execution.py:574]
+source list : ('/tmp/asterstudy_workdir_adrian/adrian-reiadrian-mié-27-181543.531/_ExportedFromSalomeObject_0_1_2_4.med',)
+destination : fort.20
+
+>>> 2022/07/27-18:15:45.501  [copyfileD@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/execution.py:574]
+cmd :
+cp -L -r /tmp/asterstudy_workdir_adrian/adrian-reiadrian-mié-27-181543.531/_ExportedFromSalomeObject_0_1_2_4.med fort.20
+background : False
+follow_output : False
+
+>>> 2022/07/27-18:15:45.512  [Shell@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/system.py:519]
+remote command ( <> reiadrian and adrian <> adrian) ? False
+
+>>> 2022/07/27-18:15:45.513  [_check_filetype@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/system.py:711]
+cmd :
+file fort.20
+background : False
+follow_output : False
+
+>>> 2022/07/27-18:15:45.525  [execute@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/execution.py:103]
+version supports: waf (True), nosuperv (False), orbinitref (True), numthreads (True)
+
+>>> 2022/07/27-18:15:45.538  [Shell@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/system.py:519]
+remote command ( <> reiadrian and adrian <> adrian) ? False
+
+>>> 2022/07/27-18:15:45.538  [execute@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/execution.py:284]
+cmd :
+ls -la
+background : False
+follow_output : False
+
+>>> 2022/07/27-18:15:45.554  [SetLimit@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/system.py:951]
+['core', 'RLIMIT_CORE', [-1, -1]]
+
+>>> 2022/07/27-18:15:45.554  [execute@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/execution.py:345]
+source list : ('fort.1.1',)
+destination : fort.1
+
+>>> 2022/07/27-18:15:45.554  [execute@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/execution.py:345]
+cmd :
+cp -L -r fort.1.1 fort.1
+background : False
+follow_output : False
+
+>>> 2022/07/27-18:15:45.564  [Shell@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/system.py:519]
+remote command ( <> reiadrian and adrian <> adrian) ? False
+
+>>> 2022/07/27-18:15:45.565  [execute@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/execution.py:377]
+cmd :
+( /home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Code_aster_stable-v144_smeca/bin/aster /home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Code_aster_stable-v144_smeca/lib/aster/Execution/E_SUPERV.py -commandes fort.1 --num_job=28063-0005-reiadrian --mode=interactif --rep_outils=/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/outils --rep_mat=/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/../Code_aster_stable-v144_smeca/share/aster/materiau --rep_dex=/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/../Code_aster_stable-v144_smeca/share/aster/datg --numthreads=1 --suivi_batch --tpmax=900.0 --memjeveux=256.0 ; echo EXECUTION_CODE_ASTER_EXIT_28063-0005-reiadrian=$? ) | tee fort.6 ; exit `grep -a EXECUTION_CODE_ASTER_EXIT_28063-0005-reiadrian fort.6 | head -1 | sed -e 's/EXECUTION_CODE_ASTER_EXIT_28063-0005-reiadrian=//'`
+background : False
+follow_output : True
+
+>>> 2022/07/27-18:15:47.742  [_diag_erre@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/build.py:1499]
+n_debut=1, n_fin=1, mess=False : ok=True
+
+>>> 2022/07/27-18:15:47.743  [_diag_erre@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/build.py:1500]
+alarm=True, errs=False, fatal=False, exitcode=0
+
+>>> 2022/07/27-18:15:47.743  [getDiag@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/build.py:1213]
+Fichier : fort.6
+_diag_erre : <A>_ALARM
+
+>>> 2022/07/27-18:15:47.745  [getDiag@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/build.py:1229]
+Fichier : fort.6
+_diag_resu : <A>_ALARM
+
+>>> 2022/07/27-18:15:47.747  [_diag_erre@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/build.py:1499]
+n_debut=1, n_fin=1, mess=True : ok=True
+
+>>> 2022/07/27-18:15:47.747  [_diag_erre@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/build.py:1500]
+alarm=True, errs=False, fatal=False, exitcode=0
+
+>>> 2022/07/27-18:15:47.748  [getDiag@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/build.py:1231]
+Fichier : fort.6
+_diag_erre : <A>_ALARM
+
+>>> 2022/07/27-18:15:47.748  [Shell@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/system.py:519]
+remote command ( <> reiadrian and adrian <> adrian) ? False
+
+>>> 2022/07/27-18:15:47.748  [execute@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/execution.py:496]
+cmd :
+ls -la . REPE_OUT
+background : False
+follow_output : False
+
+>>> 2022/07/27-18:15:47.763  [copyfileR@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/execution.py:673]
+source list : ('fort.80',)
+destination : /tmp/asterstudy_workdir_adrian/adrian-reiadrian-mié-27-181543.531/result.rmed
+
+>>> 2022/07/27-18:15:47.763  [copyfileR@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/execution.py:673]
+cmd :
+cp -L -r fort.80 /tmp/asterstudy_workdir_adrian/adrian-reiadrian-mié-27-181543.531/result.rmed
+background : False
+follow_output : False
+
+>>> 2022/07/27-18:15:47.775  [copyfileR@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/execution.py:673]
+source list : ('fort.6',)
+destination : /tmp/asterstudy_workdir_adrian/adrian-reiadrian-mié-27-181543.531/message
+
+>>> 2022/07/27-18:15:47.776  [copyfileR@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/execution.py:673]
+cmd :
+cp -L -r fort.6 /tmp/asterstudy_workdir_adrian/adrian-reiadrian-mié-27-181543.531/message
+background : False
+follow_output : False
+
+>>> 2022/07/27-18:15:47.793  [copyfileR@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/execution.py:673]
+source list : ('glob.1', 'pick.1')
+destination : /tmp/asterstudy_workdir_adrian/adrian-reiadrian-mié-27-181543.531/base-stage1
+
+>>> 2022/07/27-18:15:47.794  [copyfileR@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/execution.py:673]
+cmd :
+cp -L -r glob.1 /tmp/asterstudy_workdir_adrian/adrian-reiadrian-mié-27-181543.531/base-stage1
+background : False
+follow_output : False
+
+>>> 2022/07/27-18:15:47.830  [copyfileR@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/execution.py:673]
+cmd :
+cp -L -r pick.1 /tmp/asterstudy_workdir_adrian/adrian-reiadrian-mié-27-181543.531/base-stage1
+background : False
+follow_output : False
+
+>>> 2022/07/27-18:15:47.844  [Mess@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/run.py:639]
+Warning or error raised :
+<A>_ALARM Code_Aster run ended
+Traceback:
+  File "<string>", line 1, in <module>
+  File "/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/main.py", line 109, in main
+    start()
+  File "/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/main.py", line 92, in start
+    meth(run, *args)
+  File "/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/execute.py", line 461, in RunAster
+    run.Mess(_('Code_Aster run ended'), diag)
+  File "/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/run.py", line 639, in Mess
+    print_traceback=True)
+  File "/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/run.py", line 817, in DBG
+    stack_id=stack_id, all=all, prefix=prefix, *args)
+  File "/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/run.py", line 773, in _printDBG
+    stack = traceback.format_stack(limit=10)
+
+
+
+>>> 2022/07/27-18:15:47.844  [Shell@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/system.py:519]
+remote command ( <> reiadrian and adrian <> adrian) ? False
+
+>>> 2022/07/27-18:15:47.845  [_clear_tmp@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/run.py:483]
+cmd :
+\rm -rf /tmp/adrian-reiadrian-interactif_28063-0005-reiadrian
+background : False
+follow_output : False
+
+>>> 2022/07/27-18:15:47.861  [Shell@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/system.py:519]
+remote command ( <> reiadrian and adrian <> adrian) ? False
+
+>>> 2022/07/27-18:15:47.861  [_clear_tmp@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/run.py:483]
+cmd :
+\rm -rf /tmp/astk_adrian/adrian-reiadrian-profil_astk_28063-0005-reiadrian
+background : False
+follow_output : False
+
+>>> 2022/07/27-18:15:47.871  [Sortie@/home/adrian/SalomeMeca2019/V2019.0.3_universal/tools/Code_aster_frontend-20190/lib/python3.6/site-packages/asrun/run.py:732]
+exit 0

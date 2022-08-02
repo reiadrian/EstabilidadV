@@ -1,0 +1,60 @@
+{
+  "history": {
+    "cases": [
+      {
+        "name": "RunCase_1",
+        "stages": [
+          1
+        ],
+        "baseFolder": "RunCase_1"
+      },
+      {
+        "name": "CurrentCase",
+        "stages": [
+          1
+        ]
+      }
+    ],
+    "stages": [
+      {
+        "name": "Stage_1",
+        "text": "mesh = LIRE_MAILLAGE(UNITE=2)\n\nmodel = AFFE_MODELE(AFFE=_F(MODELISATION=('Q4G', ), PHENOMENE='MECANIQUE', TOUT='OUI'), MAILLAGE=mesh)\n\nelemprop = AFFE_CARA_ELEM(COQUE=_F(EPAIS=0.25, GROUP_MA=('INF', 'DCHA', 'SUP', 'IZQ', 'Group_1')), MODELE=model)\n\nmater = DEFI_MATERIAU(ELAS=_F(E=30000000.0, NU=0.3))\n\nfieldmat = AFFE_MATERIAU(AFFE=_F(MATER=(mater, ), TOUT='OUI'), MAILLAGE=mesh, MODELE=model)\n\nload = AFFE_CHAR_MECA(DDL_IMPO=(_F(DRX=0.0, DZ=0.0, GROUP_MA=('IZQ', )), _F(DRY=0.0, DZ=0.0, GROUP_MA=('INF', )), _F(DRX=0.0, DRY=0.0, DX=0.0, DY=0.0, DZ=0.0, GROUP_NO=('A', )), _F(DRX=0.0, GROUP_MA=('SUP', )), _F(DRY=0.0, GROUP_MA=('DCHA', )), _F(DRY=0.0, GROUP_NO=('C', )), _F(DRX=0.0, DX=0.0, DZ=0.0, GROUP_NO=('D', )), _F(DRY=0.0, DY=0.0, DZ=0.0, GROUP_NO=('B', ))), FORCE_NODALE=_F(FZ=-250.0, GROUP_NO=('C', )), MODELE=model)\n\nreslin = MECA_STATIQUE(CARA_ELEM=elemprop, CHAM_MATER=fieldmat, EXCIT=_F(CHARGE=load), MODELE=model)\n\nreslin = CALC_CHAMP(reuse=reslin, CONTRAINTE=('EFGE_ELNO', ), RESULTAT=reslin)\n\nIMPR_RESU(RESU=_F(CARA_ELEM=elemprop, MAILLAGE=mesh, RESULTAT=reslin), UNITE=80)",
+        "files": [
+          {
+            "handle": 80,
+            "filename": "/home/adrian/SalomeMeca2019/Ejemplos22/Placa_Libro/result.rmed",
+            "attr": 2
+          },
+          {
+            "handle": 2,
+            "filename": "0:1:2:4",
+            "attr": 1
+          }
+        ],
+        "result": {
+          "job": {
+            "jobid": "3",
+            "mode": "Interactive",
+            "name": "RunCase_1_Stage_1",
+            "server": "localhost",
+            "memory": 2048,
+            "time": "00:15:00",
+            "version": "stable",
+            "startTime": "jue 28 jul 2022 18:41:51",
+            "endTime": "jue 28 jul 2022 18:42:01",
+            "folder": "/home/adrian/SalomeMeca2019/Ejemplos22/Placa_Libro_RM_Fine/Study1_Files",
+            "wckey": "P10WB:ASTER",
+            "dumpString": "<?xml version=\"1.0\"?>\n<!--SALOME Launcher job-->\n<jobs>\n  <job type=\"command_salome\" name=\"RunCase_1_Stage_1\">\n    <user_part>\n      <job_file>/home/adrian/SalomeMeca2019/Ejemplos22/Placa_Libro_RM_Fine/Study1_Files/RunCase_1/Result-Stage_1/launcher_script</job_file>\n      <work_directory>/tmp/asterstudy_workdir_adrian/adrian-reiadrian-jue-28-184151.756</work_directory>\n      <result_directory>/home/adrian/SalomeMeca2019/Ejemplos22/Placa_Libro_RM_Fine/Study1_Files/RunCase_1/Result-Stage_1</result_directory>\n      <files>\n        <in_file>/home/adrian/SalomeMeca2019/Ejemplos22/Placa_Libro_RM_Fine/Study1_Files/RunCase_1/Result-Stage_1/RunCase_1_Stage_1.comm</in_file>\n        <in_file>/home/adrian/SalomeMeca2019/Ejemplos22/Placa_Libro_RM_Fine/Study1_Files/RunCase_1/Result-Stage_1/_ExportedFromSalomeObject_0_1_2_4.med</in_file>\n        <in_file>/home/adrian/SalomeMeca2019/Ejemplos22/Placa_Libro_RM_Fine/Study1_Files/RunCase_1/Result-Stage_1/export</in_file>\n        <out_file>result.rmed</out_file>\n        <out_file>message</out_file>\n        <out_file>base-stage1</out_file>\n      </files>\n      <resource_params>\n        <name>localhost</name>\n        <nb_proc>1</nb_proc>\n        <nb_node>1</nb_node>\n      </resource_params>\n      <maximum_duration>00:15:00</maximum_duration>\n      <wckey>P10WB:ASTER</wckey>\n    </user_part>\n    <run_part>\n      <job_state>FINISHED</job_state>\n      <job_reference>0</job_reference>\n    </run_part>\n  </job>\n</jobs>\n"
+          },
+          "resstate": 16
+        },
+        "uid": 1,
+        "baseFolder": "Result-Stage_1"
+      }
+    ],
+    "aster": "stable",
+    "versionMajor": 14,
+    "versionMinor": 4
+  },
+  "minor": 10
+}

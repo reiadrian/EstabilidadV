@@ -1,0 +1,29 @@
+BOOK:Desplazamiento_prescipto
+NUMBER: 1 CONDITION: Desplazamiento_prescipto
+CONDTYPE: over points
+CONDMESHTYPE: over nodes
+QUESTION: Restriccion-X#CB#(0,1)
+VALUE: 0
+QUESTION: Restriccion-Y#CB#(0,1)
+VALUE: 0
+QUESTION: Valor-X
+VALUE: 0.00
+QUESTION: Valor-Y
+VALUE: 0.00
+END CONDITION
+BOOK:Fuerza_prescripta
+NUMBER: 2 CONDITION: Fuerza_prescripta
+CONDTYPE: over points
+CONDMESHTYPE: over nodes
+QUESTION: Valor-X
+VALUE: 0.00
+QUESTION: Valor-Y
+VALUE: 0.00
+END CONDITION
+BOOK:Carga_Dist
+NUMBER: 3 CONDITION: Carga_Dist
+CONDTYPE: over lines
+CONDMESHTYPE: over nodes
+QUESTION: Carga_Normal
+VALUE: 0.00
+END CONDITION

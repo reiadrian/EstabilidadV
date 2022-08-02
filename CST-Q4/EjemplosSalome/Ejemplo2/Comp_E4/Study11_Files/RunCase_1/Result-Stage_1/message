@@ -1,0 +1,821 @@
+# ------------------------------------------------------------------------------------------
+# Impression du contenu du fichier de commandes à exécuter :
+# ------------------------------------------------------------------------------------------
+DEBUT(LANG='EN')
+
+
+mesh = LIRE_MAILLAGE(identifier='0:1',
+                     UNITE=20)
+
+model = AFFE_MODELE(identifier='1:1',
+                    AFFE=_F(MODELISATION=('C_PLAN', ),
+                            PHENOMENE='MECANIQUE',
+                            TOUT='OUI'),
+                    MAILLAGE=mesh)
+
+mater = DEFI_MATERIAU(identifier='2:1',
+                      ELAS=_F(E=30000.0,
+                              NU=0.2))
+
+fieldmat = AFFE_MATERIAU(identifier='3:1',
+                         AFFE=_F(MATER=(mater, ),
+                                 TOUT='OUI'),
+                         MAILLAGE=mesh,
+                         MODELE=model)
+
+LIzqInf = DEFI_LIST_REEL(identifier='4:1',
+                         DEBUT=0.0,
+                         INTERVALLE=_F(JUSQU_A=3.0,
+                                       NOMBRE=10))
+
+FlaIInf = FORMULE(identifier='5:1',
+                  NOM_PARA=('X', ),
+                  VALE='0.3333333*X-1')
+
+FIinf = CALC_FONC_INTERP(identifier='6:1',
+                         FONCTION=FlaIInf,
+                         INTERPOL=('LIN', ),
+                         LIST_PARA=LIzqInf,
+                         NOM_RESU='X')
+
+FlaIsup = FORMULE(identifier='7:1',
+                  NOM_PARA=('X', ),
+                  VALE='1-0.3333333*X')
+
+FIsup = CALC_FONC_INTERP(identifier='8:1',
+                         FONCTION=FlaIsup,
+                         INTERPOL=('LIN', ),
+                         LIST_PARA=LIzqInf,
+                         NOM_RESU='X')
+
+FlaDinf = FORMULE(identifier='9:1',
+                  NOM_PARA=('Y', ),
+                  VALE='1-0.3333333*Y')
+
+FlaDsup = FORMULE(identifier='10:1',
+                  NOM_PARA=('Y', ),
+                  VALE='0.3333333*Y-1')
+
+LDchSup = DEFI_LIST_REEL(identifier='11:1',
+                         DEBUT=0.0,
+                         INTERVALLE=_F(JUSQU_A=3.0,
+                                       NOMBRE=10))
+
+FDinf = CALC_FONC_INTERP(identifier='12:1',
+                         FONCTION=FlaDinf,
+                         INTERPOL=('LIN', ),
+                         LIST_PARA=LDchSup,
+                         NOM_RESU='Y')
+
+FDsup = CALC_FONC_INTERP(identifier='13:1',
+                         FONCTION=FlaDsup,
+                         INTERPOL=('LIN', ),
+                         LIST_PARA=LDchSup,
+                         NOM_RESU='Y')
+
+CInf = AFFE_CHAR_MECA_F(identifier='14:1',
+                        FORCE_CONTOUR=_F(FX=FIinf,
+                                         GROUP_MA=('Iinf', )),
+                        MODELE=model)
+
+Restric = AFFE_CHAR_MECA(identifier='15:1',
+                         DDL_IMPO=_F(GROUP_NO=('Fijos', ),
+                                     LIAISON='ENCASTRE'),
+                         MODELE=model)
+
+CIsup = AFFE_CHAR_MECA_F(identifier='16:1',
+                         FORCE_CONTOUR=_F(FX=FIsup,
+                                          GROUP_MA=('Isup', )),
+                         MODELE=model)
+
+CDinf = AFFE_CHAR_MECA_F(identifier='17:1',
+                         FORCE_CONTOUR=_F(FX=FDinf,
+                                          GROUP_MA=('Dinf', )),
+                         MODELE=model)
+
+CDsup = AFFE_CHAR_MECA_F(identifier='18:1',
+                         FORCE_CONTOUR=_F(FX=FDsup,
+                                          GROUP_MA=('Dsup', )),
+                         MODELE=model)
+
+reslin = MECA_STATIQUE(identifier='19:1',
+                       CHAM_MATER=fieldmat,
+                       EXCIT=(_F(CHARGE=CInf),
+                              _F(CHARGE=Restric),
+                              _F(CHARGE=CIsup),
+                              _F(CHARGE=CDinf),
+                              _F(CHARGE=CDsup)),
+                       MODELE=model)
+
+IMPR_RESU(identifier='20:1',
+          RESU=_F(MAILLAGE=mesh,
+                  RESULTAT=reslin),
+          UNITE=2)
+
+FIN()
+# ------------------------------------------------------------------------------------------
+
+  Ouverture en écriture du fichier ./vola.1
+
+ <INFO> Démarrage de l'exécution.
+                                                                                
+                                                                                
+              -- CODE_ASTER -- VERSION:  EXPLOITATION (stable) --               
+                                                                                
+                       Modified 14.4.0 version 21/08/2019                       
+                the revision 2708712c2a40 - branch  v14.4_smeca                 
+                        Copyright EDF R & D 1991 - 2022                         
+                                                                                
+                    Exécution of:  Tue Jul 26 22:11:17 2022                     
+                        Name of the machine:  reiadrian                         
+                               Structure:  64bit                                
+                               CPU type:  x86_64                                
+   Operating system:  Linux-5.15.0-41-generic-x86_64-with-debian-bullseye-sid   
+                     Language of the messages:  en (UTF-8)                      
+                                                                                
+                             Python version: 3.6.5                              
+                             NumPy version: 1.15.1                              
+   
+   !------------------------------------------------------------------------!
+   ! <A> <SUPERVIS2_2>                                                      !
+   !                                                                        !
+   !  You use an old version of Code_Aster.                                 !
+   !                                                                        !
+   !  By upgrading your version, you will profit from the last improvements !
+   !  made to the code since 15 month.                                      !
+   !  If you have private developments, you are likely to have an important !
+   !  work of bearing if you do not follow the upgraded ones.               !
+   !                                                                        !
+   !                                                                        !
+   ! This is a warning. If you do not understand the meaning of this        !
+   !  warning, you can obtain unexpected results!                           !
+   !------------------------------------------------------------------------!
+   
+                             Parallelism MPI: idle                              
+                           OpenMP parallelism: Nombre                           
+                          credit of processes used:  1                          
+                      Version of the HDF5 library : 1.10.3                      
+                       Version of the MED library : 4.0.0                       
+                     Version de la librairie MFront : 3.2.1                     
+                          MUMPS library version: 5.1.2                          
+                          PETSc library: not available                          
+                     Version of the SCOTCH library : 6.0.4                      
+
+                  Mémoire limite pour l'exécution : 2048.00 Mo                  
+                   consommée par l'initialisation : 412.54 Mo                   
+                  par les objets du jeu de commandes : 3.16 Mo                  
+                 reste pour l'allocation dynamique : 1632.30 Mo                 
+                   Cut limiting files of exchange:  48.00 Go                    
+                                                                                
+
+.. __stg1_txt1
+  # ------------------------------------------------------------------------------------------
+  # Commands No:  0001 Concept of the type:  -
+  # ------------------------------------------------------------------------------------------
+  DEBUT(LANG='EN',
+        PAR_LOT='OUI',
+        IMPR_MACRO='NON',
+        DEBUG=_F(JXVERI='NON',
+                 SDVERI='NON',
+                 JEVEUX='NON',
+                 HIST_ETAPE='NON',),
+        MESURE_TEMPS=_F(NIVE_DETAIL=1,
+                        MOYENNE='NON',),
+        MEMOIRE=_F(TAILLE_BLOC=800.0,
+                   TAILLE_GROUP_ELEM=1000,),
+        RESERVE_CPU=_F(BORNE=900,),
+        INFO=1,)
+
+   
+   !-------------------------------------------------!
+   ! <I> <SUPERVIS_41>                               !
+   !                                                 !
+   ! The version 14.4.0 was modified by 1 revisions. !
+   !-------------------------------------------------!
+   
+
+ Initial value of maximum time CPU = 900 second
+ Valeur of the maximum time CPU placed to the orders = 810 second
+ Réserve CPU envisaged = 90 seconds 
+
+  Ouverture en écriture du fichier ./glob.1
+
+  Ouverture en écriture du fichier ./vola.1
+
+  Ouverture en lecture du fichier
+/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Code_aster_stable-v144_smeca/lib/aster/elem.1
+
+     Nom de la base                          :  ELEMBASE
+     Créée avec la version                   :  14.04.00
+     Nombre d'enregistrements utilisés       :  43
+     Nombre d'enregistrements maximum        :  512
+     Longueur d'enregistrement (octets)      :  819200
+     Nombre d'identificateurs utilisés       :  123
+     Taille maximum du répertoire            :  300
+     Pourcentage d'utilisation du répertoire :  41 %
+
+  Ouverture en lecture du fichier
+/home/adrian/SalomeMeca2019//V2019.0.3_universal/tools/Code_aster_stable-v144_smeca/lib/aster/elem.1
+
+
+     Nom de la base                          :  ELEMBASE
+     Nombre d'enregistrements utilisés       :  43
+     Nombre d'enregistrements maximum        :  512
+     Longueur d'enregistrement (octets)      :  819200
+     Nombre total d'accès en lecture         :  60
+     Volume des accès en lecture             :         46.88 Mo.
+     Nombre total d'accès en écriture        :  0
+     Volume des accès en écriture            :          0.00 Mo.
+     Nombre d'identificateurs utilisés       :  123
+     Taille maximum du répertoire            :  300
+     Pourcentage d'utilisation du répertoire :  41 %
+
+ Second reading of the catalogues of the elements made. 
+
+ End of reading (lasted 0.027647 S.)   
+  # Memory (Mo):    460.51 /    452.81 /     44.30 /     22.92 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0001 user+syst:          0.04S (syst:          0.01S, Elaps:          0.05S)
+  # ------------------------------------------------------------------------------------------
+
+.. __stg1_cmd0:1
+  # ------------------------------------------------------------------------------------------
+  # Commands No:  0002 Concept of the type:  maillage_sdaster
+  # ------------------------------------------------------------------------------------------
+  mesh = LIRE_MAILLAGE(UNITE=20,
+                       INFO_MED=1,
+                       FORMAT='MED',
+                       VERI_MAIL=_F(VERIF='OUI',
+                                    APLAT=1.E-3,),
+                       INFO=1,)
+
+Vérification du maillage.
+
+------------ MAILLAGE mesh     - IMPRESSIONS NIVEAU  1 ------------
+
+MA-26-JUIL-2022 22:11:17                                                        
+
+NOMBRE DE NOEUDS                         453
+
+NOMBRE DE MAILLES                        906
+                              SEG2                   98
+                              TRIA3                 808
+
+NOMBRE DE GROUPES DE NOEUDS                1
+                              Fijos                                2
+
+NOMBRE DE GROUPES DE MAILLES               5
+                              Isup                                 6
+                              Dinf                                 6
+                              Iinf                                 6
+                              Placa                              808
+                              Dsup                                 7
+
+--------------------------------------------------------------------------------
+
+  # Memory (Mo):    460.51 /    453.85 /     44.30 /     22.92 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0002 user+syst:          0.01S (syst:          0.00S, Elaps:          0.01S)
+  # ------------------------------------------------------------------------------------------
+
+.. __stg1_cmd1:1
+  # ------------------------------------------------------------------------------------------
+  # Commands No:  0004 Concept of the type:  modele_sdaster
+  # ------------------------------------------------------------------------------------------
+  model = AFFE_MODELE(MAILLAGE=mesh,
+                      AFFE=_F(TOUT='OUI',
+                              PHENOMENE='MECANIQUE',
+                              MODELISATION=('C_PLAN', ),),
+                      INFO=1,
+                      DISTRIBUTION=_F(PARTITIONNEUR='METIS',
+                                      METHODE='SOUS_DOMAINE',),
+                      VERI_JACOBIEN='OUI',)
+
+
+Sur les 906 mailles du maillage mesh, on a demandé l'affectation de 906, on a pu en affecter 906
+ Modélisation     Type maille  Élément fini     Nombre
+ C_PLAN           TRIA3        MECPTR3          808
+                  SEG2         MEPLSE2          98
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.00
+  # Memory (Mo):    486.63 /    486.63 /     44.30 /     34.08 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0004 user+syst:          0.00S (syst:          0.00S, Elaps:          0.01S)
+  # ------------------------------------------------------------------------------------------
+
+.. __stg1_cmd2:1
+  # ------------------------------------------------------------------------------------------
+  # Commands No:  0005 Concept of the type:  mater_sdaster
+  # ------------------------------------------------------------------------------------------
+  mater = DEFI_MATERIAU(ELAS=_F(E=3.E4,
+                                NU=0.2,
+                                COEF_AMOR=1.0,),
+                        INFO=1,)
+
+Propriétés définies dans le matériau: ELAS.
+  # Memory (Mo):    486.63 /    486.63 /     44.30 /     34.08 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0005 user+syst:          0.01S (syst:          0.00S, Elaps:          0.00S)
+  # ------------------------------------------------------------------------------------------
+
+.. __stg1_cmd3:1
+  # ------------------------------------------------------------------------------------------
+  # Commands No:  0006 Concept of the type:  cham_mater
+  # ------------------------------------------------------------------------------------------
+  fieldmat = AFFE_MATERIAU(MAILLAGE=mesh,
+                           MODELE=model,
+                           AFFE=_F(TOUT='OUI',
+                                   MATER=(mater, ),),
+                           INFO=1,)
+
+  # Memory (Mo):    486.63 /    486.63 /     44.30 /     34.08 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0006 user+syst:          0.00S (syst:          0.00S, Elaps:          0.01S)
+  # ------------------------------------------------------------------------------------------
+
+.. __stg1_cmd4:1
+  # ------------------------------------------------------------------------------------------
+  # Commands No:  0007 Concept of the type:  listr8_sdaster
+  # ------------------------------------------------------------------------------------------
+  LIzqInf = DEFI_LIST_REEL(DEBUT=0.0,
+                           INTERVALLE=_F(JUSQU_A=3.0,
+                                         NOMBRE=10,),
+                           INFO=1,)
+
+  # Memory (Mo):    486.63 /    486.63 /     44.30 /     34.08 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0007 user+syst:          0.00S (syst:          0.00S, Elaps:          0.00S)
+  # ------------------------------------------------------------------------------------------
+
+.. __stg1_cmd5:1
+  # ------------------------------------------------------------------------------------------
+  # Commands No:  0008 Concept of the type:  formule
+  # ------------------------------------------------------------------------------------------
+  FlaIInf = FORMULE(VALE='0.3333333*X-1',
+                    NOM_PARA=('X', ),)
+
+  # Memory (Mo):    486.63 /    486.63 /     44.30 /     34.08 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0008 user+syst:          0.00S (syst:          0.00S, Elaps:          0.00S)
+  # ------------------------------------------------------------------------------------------
+
+.. __stg1_cmd6:1
+  # ------------------------------------------------------------------------------------------
+  # Commands No:  0009 Concept of the type:  fonction_sdaster
+  # ------------------------------------------------------------------------------------------
+  FIinf = CALC_FONC_INTERP(FONCTION=FlaIInf,
+                           LIST_PARA=LIzqInf,
+                           NOM_RESU='X',
+                           INTERPOL=('LIN', ),
+                           INFO=1,)
+
+  # Memory (Mo):    486.63 /    486.63 /     44.30 /     34.08 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0009 user+syst:          0.01S (syst:          0.00S, Elaps:          0.00S)
+  # ------------------------------------------------------------------------------------------
+
+.. __stg1_cmd7:1
+  # ------------------------------------------------------------------------------------------
+  # Commands No:  0010 Concept of the type:  formule
+  # ------------------------------------------------------------------------------------------
+  FlaIsup = FORMULE(VALE='1-0.3333333*X',
+                    NOM_PARA=('X', ),)
+
+  # Memory (Mo):    486.63 /    486.63 /     44.30 /     34.08 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0010 user+syst:          0.00S (syst:          0.00S, Elaps:          0.00S)
+  # ------------------------------------------------------------------------------------------
+
+.. __stg1_cmd8:1
+  # ------------------------------------------------------------------------------------------
+  # Commands No:  0011 Concept of the type:  fonction_sdaster
+  # ------------------------------------------------------------------------------------------
+  FIsup = CALC_FONC_INTERP(FONCTION=FlaIsup,
+                           LIST_PARA=LIzqInf,
+                           NOM_RESU='X',
+                           INTERPOL=('LIN', ),
+                           INFO=1,)
+
+  # Memory (Mo):    486.63 /    486.63 /     44.30 /     34.08 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0011 user+syst:          0.00S (syst:          0.00S, Elaps:          0.00S)
+  # ------------------------------------------------------------------------------------------
+
+.. __stg1_cmd9:1
+  # ------------------------------------------------------------------------------------------
+  # Commands No:  0012 Concept of the type:  formule
+  # ------------------------------------------------------------------------------------------
+  FlaDinf = FORMULE(VALE='1-0.3333333*Y',
+                    NOM_PARA=('Y', ),)
+
+  # Memory (Mo):    486.63 /    486.63 /     44.30 /     34.08 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0012 user+syst:          0.00S (syst:          0.00S, Elaps:          0.00S)
+  # ------------------------------------------------------------------------------------------
+
+.. __stg1_cmd10:1
+  # ------------------------------------------------------------------------------------------
+  # Commands No:  0013 Concept of the type:  formule
+  # ------------------------------------------------------------------------------------------
+  FlaDsup = FORMULE(VALE='0.3333333*Y-1',
+                    NOM_PARA=('Y', ),)
+
+  # Memory (Mo):    486.63 /    486.63 /     44.30 /     34.08 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0013 user+syst:          0.00S (syst:          0.00S, Elaps:          0.00S)
+  # ------------------------------------------------------------------------------------------
+
+.. __stg1_cmd11:1
+  # ------------------------------------------------------------------------------------------
+  # Commands No:  0014 Concept of the type:  listr8_sdaster
+  # ------------------------------------------------------------------------------------------
+  LDchSup = DEFI_LIST_REEL(DEBUT=0.0,
+                           INTERVALLE=_F(JUSQU_A=3.0,
+                                         NOMBRE=10,),
+                           INFO=1,)
+
+  # Memory (Mo):    486.63 /    486.63 /     44.30 /     34.08 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0014 user+syst:          0.00S (syst:          0.00S, Elaps:          0.00S)
+  # ------------------------------------------------------------------------------------------
+
+.. __stg1_cmd12:1
+  # ------------------------------------------------------------------------------------------
+  # Commands No:  0015 Concept of the type:  fonction_sdaster
+  # ------------------------------------------------------------------------------------------
+  FDinf = CALC_FONC_INTERP(FONCTION=FlaDinf,
+                           LIST_PARA=LDchSup,
+                           NOM_RESU='Y',
+                           INTERPOL=('LIN', ),
+                           INFO=1,)
+
+  # Memory (Mo):    486.63 /    486.63 /     44.30 /     34.08 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0015 user+syst:          0.00S (syst:          0.00S, Elaps:          0.01S)
+  # ------------------------------------------------------------------------------------------
+
+.. __stg1_cmd13:1
+  # ------------------------------------------------------------------------------------------
+  # Commands No:  0016 Concept of the type:  fonction_sdaster
+  # ------------------------------------------------------------------------------------------
+  FDsup = CALC_FONC_INTERP(FONCTION=FlaDsup,
+                           LIST_PARA=LDchSup,
+                           NOM_RESU='Y',
+                           INTERPOL=('LIN', ),
+                           INFO=1,)
+
+  # Memory (Mo):    486.63 /    486.63 /     44.30 /     34.08 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0016 user+syst:          0.00S (syst:          0.00S, Elaps:          0.00S)
+  # ------------------------------------------------------------------------------------------
+
+.. __stg1_cmd14:1
+  # ------------------------------------------------------------------------------------------
+  # Commands No:  0017 Concept of the type:  char_meca
+  # ------------------------------------------------------------------------------------------
+  CInf = AFFE_CHAR_MECA_F(MODELE=model,
+                          FORCE_CONTOUR=_F(GROUP_MA=('Iinf', ),
+                                           FX=FIinf,),
+                          VERI_NORM='OUI',
+                          DOUBLE_LAGRANGE='OUI',
+                          INFO=1,)
+
+  # Memory (Mo):    486.66 /    486.64 /     44.30 /     34.08 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0017 user+syst:          0.01S (syst:          0.00S, Elaps:          0.00S)
+  # ------------------------------------------------------------------------------------------
+
+.. __stg1_cmd15:1
+  # ------------------------------------------------------------------------------------------
+  # Commands No:  0018 Concept of the type:  char_meca
+  # ------------------------------------------------------------------------------------------
+  Restric = AFFE_CHAR_MECA(MODELE=model,
+                           DDL_IMPO=_F(GROUP_NO=('Fijos', ),
+                                       LIAISON='ENCASTRE',),
+                           VERI_NORM='OUI',
+                           DOUBLE_LAGRANGE='OUI',
+                           INFO=1,)
+
+  # Memory (Mo):    486.93 /    486.77 /     44.30 /     34.08 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0018 user+syst:          0.00S (syst:          0.00S, Elaps:          0.01S)
+  # ------------------------------------------------------------------------------------------
+
+.. __stg1_cmd16:1
+  # ------------------------------------------------------------------------------------------
+  # Commands No:  0019 Concept of the type:  char_meca
+  # ------------------------------------------------------------------------------------------
+  CIsup = AFFE_CHAR_MECA_F(MODELE=model,
+                           FORCE_CONTOUR=_F(GROUP_MA=('Isup', ),
+                                            FX=FIsup,),
+                           VERI_NORM='OUI',
+                           DOUBLE_LAGRANGE='OUI',
+                           INFO=1,)
+
+  # Memory (Mo):    486.93 /    486.77 /     44.30 /     34.08 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0019 user+syst:          0.00S (syst:          0.00S, Elaps:          0.00S)
+  # ------------------------------------------------------------------------------------------
+
+.. __stg1_cmd17:1
+  # ------------------------------------------------------------------------------------------
+  # Commands No:  0020 Concept of the type:  char_meca
+  # ------------------------------------------------------------------------------------------
+  CDinf = AFFE_CHAR_MECA_F(MODELE=model,
+                           FORCE_CONTOUR=_F(GROUP_MA=('Dinf', ),
+                                            FX=FDinf,),
+                           VERI_NORM='OUI',
+                           DOUBLE_LAGRANGE='OUI',
+                           INFO=1,)
+
+  # Memory (Mo):    486.93 /    486.77 /     44.30 /     34.08 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0020 user+syst:          0.01S (syst:          0.00S, Elaps:          0.00S)
+  # ------------------------------------------------------------------------------------------
+
+.. __stg1_cmd18:1
+  # ------------------------------------------------------------------------------------------
+  # Commands No:  0021 Concept of the type:  char_meca
+  # ------------------------------------------------------------------------------------------
+  CDsup = AFFE_CHAR_MECA_F(MODELE=model,
+                           FORCE_CONTOUR=_F(GROUP_MA=('Dsup', ),
+                                            FX=FDsup,),
+                           VERI_NORM='OUI',
+                           DOUBLE_LAGRANGE='OUI',
+                           INFO=1,)
+
+  # Memory (Mo):    486.93 /    486.77 /     44.30 /     34.08 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0021 user+syst:          0.00S (syst:          0.00S, Elaps:          0.00S)
+  # ------------------------------------------------------------------------------------------
+
+.. __stg1_cmd19:1
+  # ------------------------------------------------------------------------------------------
+  # Commands No:  0022 Concept of the type:  evol_elas
+  # ------------------------------------------------------------------------------------------
+  reslin = MECA_STATIQUE(MODELE=model,
+                         CHAM_MATER=fieldmat,
+                         EXCIT=(_F(CHARGE=CInf,
+                                   TYPE_CHARGE='FIXE_CSTE',),
+                                _F(CHARGE=Restric,
+                                   TYPE_CHARGE='FIXE_CSTE',),
+                                _F(CHARGE=CIsup,
+                                   TYPE_CHARGE='FIXE_CSTE',),
+                                _F(CHARGE=CDinf,
+                                   TYPE_CHARGE='FIXE_CSTE',),
+                                _F(CHARGE=CDsup,
+                                   TYPE_CHARGE='FIXE_CSTE',),
+                                ),
+                         OPTION='SIEF_ELGA',
+                         SOLVEUR=_F(RENUM='AUTO',
+                                    NPREC=8,
+                                    ELIM_LAGR='LAGR2',
+                                    STOP_SINGULIER='OUI',
+                                    TYPE_RESOL='AUTO',
+                                    ACCELERATION='AUTO',
+                                    LOW_RANK_SEUIL=0.0,
+                                    PRETRAITEMENTS='AUTO',
+                                    POSTTRAITEMENTS='AUTO',
+                                    PCENT_PIVOT=20,
+                                    RESI_RELA=1.E-06,
+                                    GESTION_MEMOIRE='AUTO',
+                                    MATR_DISTRIBUEE='NON',
+                                    METHODE='MUMPS',),
+                         INFO=1,)
+
+  Le système linéaire à résoudre a 914 degrés de liberté:
+   - 906 sont des degrés de liberté physiques
+     (ils sont portés par 453 noeuds du maillage)
+   - 8 sont les couples de paramètres de Lagrange associés
+     aux 4 relations linéaires dualisées.
+  La matrice est de taille 914 équations.
+  Elle contient 6431 termes non nuls si elle est symétrique et 11948 termes non nuls si elle n'est pas symétrique.
+  Soit un taux de remplissage de   1.430 %.
+   
+   !---------------------------------------------------------------------------------------------------------------!
+   ! <EXCEPTION> <FONCT0_20>                                                                                       !
+   !                                                                                                               !
+   ! One is out of field of definition of the function.                                                            !
+   ! One cannot interpolate the function for this X-coordinate because the prolongation on the right is excluded.  !
+   !  X-coordinate requested:  3.358487                                                                            !
+   !  higher limit of the X-coordinates:  3.000000                                                                 !
+   !                                                                                                               !
+   !  - > Risks & advices:                                                                                         !
+   !  See key word PROL_DROITE of the commands which create functions.                                             !
+   !                                                                                                               !
+   ! --------------------------------------------                                                                  !
+   ! Contexte du message :                                                                                         !
+   !    Option         : CHAR_MECA_FF1D2D                                                                          !
+   !    Type d'élément : MEPLSE2                                                                                   !
+   !    Maillage       : mesh                                                                                      !
+   !    Maille         : M27                                                                                       !
+   !    Type de maille : SEG2                                                                                      !
+   !    Cette maille appartient aux groupes de mailles suivants :                                                  !
+   !       Dsup                                                                                                    !
+   !    Position du centre de gravité de la maille :                                                               !
+   !       x=10.000000 y=3.227272 z=0.000000                                                                       !
+   !---------------------------------------------------------------------------------------------------------------!
+   
+   
+   !--------------------------------------------------------------!
+   ! <EXCEPTION> <FONCT0_9>                                       !
+   !                                                              !
+   ! Error during the interpolation of the function  FDsup.       !
+   !                                                              !
+   ! Nombre de paramètres fournis : 3                             !
+   ! Noms des paramètres fournis  : X Y INST                      !
+   ! on the mesh  M27                                             !
+   !                                                              !
+   ! --------------------------------------------                 !
+   ! Contexte du message :                                        !
+   !    Option         : CHAR_MECA_FF1D2D                         !
+   !    Type d'élément : MEPLSE2                                  !
+   !    Maillage       : mesh                                     !
+   !    Maille         : M27                                      !
+   !    Type de maille : SEG2                                     !
+   !    Cette maille appartient aux groupes de mailles suivants : !
+   !       Dsup                                                   !
+   !    Position du centre de gravité de la maille :              !
+   !       x=10.000000 y=3.227272 z=0.000000                      !
+   !--------------------------------------------------------------!
+   
+
+ Destruction of the concept  reslin. 
+ <S> ERREUR UTILISATEUR RECUPEREE PAR LE SUPERVISEUR
+
+.. __stg1_txt112
+  # ------------------------------------------------------------------------------------------
+  # Commands No:  0023 Concept of the type:  -
+  # ------------------------------------------------------------------------------------------
+  FIN(FORMAT_HDF='NON',
+      RETASSAGE='NON',
+      INFO_RESU='OUI',
+      PROC0='OUI',
+      )
+
+   
+   !-----------------------------------------------------------------!
+   ! <I> <CATAMESS_89>                                               !
+   !                                                                 !
+   !  List of warnings emitted during the execution of computation.  !
+   !                                                                 !
+   !  Warnings which you chose to ignore of are preceded by (*).     !
+   !  Number of occurrences for each warning:                        !
+   !              SUPERVIS2_2          emitted    1 time             !
+   !-----------------------------------------------------------------!
+   
+ ---------------------------------------------------------------------------
+ Concepts de la base: G
+    Nom       Type                 Taille (Mo)         Nombre      Nombre de
+                                                     d'objets       segments
+    TOTAL                                27.48            195            333
+  
+    mesh       MAILLAGE_SDASTER           0.09             36             63
+    model      MODELE_SDASTER             0.05              8             13
+    mater      MATER_SDASTER              0.00              5              5
+    fieldmat   CHAM_MATER                 0.00              6             11
+    LIzqInf    LISTR8_SDASTER             0.00              6              6
+    FlaIInf    FORMULE                    0.00              3              3
+    FIinf      FONCTION_SDASTER           0.00              4              4
+    FlaIsup    FORMULE                    0.00              3              3
+    FIsup      FONCTION_SDASTER           0.00              4              4
+    FlaDinf    FORMULE                    0.00              3              3
+    FlaDsup    FORMULE                    0.00              3              3
+    LDchSup    LISTR8_SDASTER             0.00              6              6
+    FDinf      FONCTION_SDASTER           0.00              4              4
+    FDsup      FONCTION_SDASTER           0.00              4              4
+    CInf       CHAR_MECA                  0.01              8             13
+    Restric    CHAR_MECA                  0.02             23             43
+    CIsup      CHAR_MECA                  0.01              8             13
+    CDinf      CHAR_MECA                  0.01              8             13
+    CDsup      CHAR_MECA                  0.01              8             13
+    &FOZERO                               0.00              2              2
+    &&_NUM_C                              0.00              1              1
+    &CATA.AC                              0.00              2              4
+    &CATA.CL                              0.60              1              3
+    &CATA.GD                              0.14              4             11
+    &CATA.ME                              0.20              2              4
+    &CATA.OP                              0.30              4             19
+    &CATA.PH                              0.00              1              1
+    &CATA.PR                              0.00              2              4
+    &CATA.TE                             26.03             17             42
+    &CATA.TH                              0.01              2              4
+    &CATA.TM                              0.01              7             11
+ ---------------------------------------------------------------------------
+
+
+     Nom de la base                          :  GLOBALE
+     Nombre d'enregistrements utilisés       :  46
+     Nombre d'enregistrements maximum        :  62914
+     Longueur d'enregistrement (octets)      :  819200
+     Nombre total d'accès en lecture         :  7
+     Volume des accès en lecture             :          5.47 Mo.
+     Nombre total d'accès en écriture        :  62
+     Volume des accès en écriture            :         48.44 Mo.
+     Nombre d'identificateurs utilisés       :  370
+     Taille maximum du répertoire            :  2000
+     Pourcentage d'utilisation du répertoire :  18 %
+
+
+     Nom de la base                          :  VOLATILE
+     Nombre d'enregistrements utilisés       :  4
+     Nombre d'enregistrements maximum        :  62914
+     Longueur d'enregistrement (octets)      :  819200
+     Nombre total d'accès en lecture         :  1
+     Volume des accès en lecture             :          0.78 Mo.
+     Nombre total d'accès en écriture        :  8
+     Volume des accès en écriture            :          6.25 Mo.
+     Nombre d'identificateurs utilisés       :  527
+     Taille maximum du répertoire            :  2000
+     Pourcentage d'utilisation du répertoire :  26 %
+
+ <FIN> Arrêt normal dans "FIN".
+ <I> <FIN> ARRET NORMAL DANS "FIN" PAR APPEL A "JEFINI".
+
+ The memory requested from launching is over-estimated, it is of 2048.00 Mo. 
+ The peak report used is of 493.74 Mo. 
+ 
+
+
+     Nom de la base                          :  ELEMBASE
+     Nombre d'enregistrements utilisés       :  43
+     Nombre d'enregistrements maximum        :  512
+     Longueur d'enregistrement (octets)      :  819200
+     Nombre total d'accès en lecture         :  60
+     Volume des accès en lecture             :         46.88 Mo.
+     Nombre total d'accès en écriture        :  0
+     Volume des accès en écriture            :          0.00 Mo.
+     Nombre d'identificateurs utilisés       :  123
+     Taille maximum du répertoire            :  300
+     Pourcentage d'utilisation du répertoire :  41 %
+  
+ <I> <FIN> MEMOIRE JEVEUX MINIMALE REQUISE POUR L'EXECUTION :                      34.12 Mo
+ <I> <FIN> MEMOIRE JEVEUX OPTIMALE REQUISE POUR L'EXECUTION :                      44.30 Mo
+ <I> <FIN> MAXIMUM DE MEMOIRE UTILISEE PAR LE PROCESSUS LORS DE L'EXECUTION :     493.74 Mo
+  
+ <I>       FERMETURE DES BASES EFFECTUEE
+  
+   STATISTIQUES CONCERNANT L'ALLOCATION DYNAMIQUE :
+     TAILLE CUMULEE MAXIMUM            :                   44  Mo.
+     TAILLE CUMULEE LIBEREE            :                    6  Mo.
+     NOMBRE TOTAL D'ALLOCATIONS        :                 3833
+     NOMBRE TOTAL DE LIBERATIONS       :                 3813
+     APPELS AU MECANISME DE LIBERATION :                    0
+     TAILLE MEMOIRE CUMULEE RECUPEREE  :                    0  Mo.
+     VOLUME DES LECTURES               :                    0  Mo.
+     VOLUME DES ECRITURES              :                    1  Mo.
+  
+   MEMOIRE JEVEUX MINIMALE REQUISE POUR L'EXECUTION :      34.12 Mo
+     - IMPOSE DE NOMBREUX ACCES DISQUE
+     - RALENTIT LA VITESSE D'EXECUTION
+   MEMOIRE JEVEUX OPTIMALE REQUISE POUR L'EXECUTION :      44.30 Mo
+     - LIMITE LES ACCES DISQUE
+     - AMELIORE LA VITESSE D'EXECUTION
+   MAXIMUM DE MEMOIRE UTILISEE PAR LE PROCESSUS     :     493.74 Mo
+     - COMPREND LA MEMOIRE CONSOMMEE PAR  JEVEUX, 
+       LE SUPERVISEUR PYTHON, LES LIBRAIRIES EXTERNES
+  
+ <I>       FIN D'EXECUTION LE : MA-26-JUIL-2022 22:11:17
+
+
+  <I> Informations sur les temps d'exécution
+      Temps cpu user total                    0.63 s
+      Temps cpu systeme total                 0.06 s
+      Temps elapsed total                     0.70 s
+      Temps restant                         809.30 s
+
+
+ The signup of the saved base is (with the address 0): 
+  02fc7b29d29be6d8fee736e3119828d38a7a5a49 
+
+ ********************************************************************************
+ * COMMAND                  :       USER :     SYSTEM :   USER+SYS :    ELAPSED *
+ ********************************************************************************
+ * init (jdc)               :       0.50 :       0.02 :       0.52 :       0.53 *
+ *  . compile               :       0.00 :       0.00 :       0.00 :       0.00 *
+ *  . exec_compile          :       0.09 :       0.00 :       0.09 :       0.09 *
+ *  . report                :       0.01 :       0.00 :       0.01 :       0.01 *
+ *  . build                 :       0.00 :       0.00 :       0.00 :       0.00 *
+ * DEBUT                    :       0.03 :       0.01 :       0.04 :       0.05 *
+ * LIRE_MAILLAGE            :       0.01 :       0.00 :       0.01 :       0.01 *
+ * AFFE_MODELE              :       0.00 :       0.00 :       0.00 :       0.01 *
+ * DEFI_MATERIAU            :       0.01 :       0.00 :       0.01 :       0.00 *
+ * AFFE_MATERIAU            :       0.00 :       0.00 :       0.00 :       0.01 *
+ * DEFI_LIST_REEL           :       0.00 :       0.00 :       0.00 :       0.00 *
+ * FORMULE                  :       0.00 :       0.00 :       0.00 :       0.00 *
+ * CALC_FONC_INTERP         :       0.01 :       0.00 :       0.01 :       0.00 *
+ * FORMULE                  :       0.00 :       0.00 :       0.00 :       0.00 *
+ * CALC_FONC_INTERP         :       0.00 :       0.00 :       0.00 :       0.00 *
+ * FORMULE                  :       0.00 :       0.00 :       0.00 :       0.00 *
+ * FORMULE                  :       0.00 :       0.00 :       0.00 :       0.00 *
+ * DEFI_LIST_REEL           :       0.00 :       0.00 :       0.00 :       0.00 *
+ * CALC_FONC_INTERP         :       0.00 :       0.00 :       0.00 :       0.01 *
+ * CALC_FONC_INTERP         :       0.00 :       0.00 :       0.00 :       0.00 *
+ * AFFE_CHAR_MECA_F         :       0.01 :       0.00 :       0.01 :       0.00 *
+ * AFFE_CHAR_MECA           :       0.00 :       0.00 :       0.00 :       0.01 *
+ * AFFE_CHAR_MECA_F         :       0.00 :       0.00 :       0.00 :       0.00 *
+ * AFFE_CHAR_MECA_F         :       0.01 :       0.00 :       0.01 :       0.00 *
+ * AFFE_CHAR_MECA_F         :       0.00 :       0.00 :       0.00 :       0.00 *
+ * MECA_STATIQUE            :       0.06 :       0.02 :       0.08 :       0.08 *
+ * FIN                      :       0.03 :       0.02 :       0.05 :       0.04 *
+ *  . part Superviseur      :       0.55 :       0.04 :       0.59 :       0.58 *
+ *  . part Fortran          :       0.09 :       0.02 :       0.11 :       0.13 *
+ ********************************************************************************
+ * TOTAL_JOB                :       0.63 :       0.06 :       0.69 :       0.70 *
+ ********************************************************************************
+
+JDC.py : ERREUR WITH THE EXECUTION - INTERRUPTION
+>> JDC.py: DEBUT CR of execution of JDC in MIXTE
+   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+   ! <S> Exception user raised but not interceptee.         !
+   ! The bases are fermees.                                 !
+   ! Type of the exception: error                           !
+   !                                                        !
+   ! Error during the interpolation of the function  FDsup. !
+   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+fine CR of execution of JDC in MIXTE
+
+ REPORT
+ >> JDC.py: FIN REPORT
+EXECUTION_CODE_ASTER_EXIT_30351-0023-reiadrian=1
+
+ <I>_EXIT_CODE = 1

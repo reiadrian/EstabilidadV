@@ -1,0 +1,34 @@
+GiD Post Results File 1.0 
+# Datos de puntos de gauss del Set_1
+GaussPoints "GP_Set_1" Elemtype Triangle "Set_1"
+Number of Gauss Points: 1
+Nodes not included
+Natural Coordinates: Given
+0.333333 0.333333
+End GaussPoints
+Result "Displacements" "Load Analysis" 1 Vector OnNodes
+ComponentNames "X-DISPL" "Y-DISPL"
+Values
+1 0 0
+2 0 0
+3 -3.02664258438127e-05 -0.000103359679282021
+4 3.85719646504411e-05 -9.8344232947089e-05
+5 -1.69056950544227e-05 -0.000313865492586416
+6 5.07842755861908e-05 -0.000314820086182676
+End Values
+Result "Stresses//On Gauss Points" "Load Analysis" 1 PlainDeformationMatrix OnGaussPoints "GP_Set_1"
+ComponentNames "Stress XX" "Stress YY" "Stress XY" "Stress ZZ"
+Values
+1 0.301343473831571 0.0602686947663143 -0.307325727959653
+2 -0.401791298442094 -0.0134856418893198 0.0542120817239835
+3 0.109340474560356 0.0887407127111704 -0.294051538615354
+4 -0.164010711840534 -0.0518940142932957 -0.0922560254103005
+End Values
+Result "Strain//On Gauss Points" "Load Analysis" 1 PlainDeformationMatrix OnGaussPoints "GP_Set_1"
+ComponentNames "Strain XX" "Strain YY" "Strain XY" "Strain ZZ"
+Values
+1 9.64299116261029e-06 0 -2.45860582367722e-05
+2 -1.3303139002141e-05 2.22908725996997e-06 4.33696653791868e-06
+3 3.05307773393741e-06 2.22908725996997e-06 -2.35241230892283e-05
+4 -5.12106363272917e-06 -6.3639573083963e-07 -7.38048203282404e-06
+End Values
